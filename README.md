@@ -1,6 +1,6 @@
 # Mazeed: mazeed.com.ly
 
-موقع مزيد للأبحاث والتدريب، بتبويبين: مزيد و دُوري.
+موقع مزيد للأبحاث والتدريب: صفحة واحدة، مع تسجيل الاهتمام وترشيح الطلبة عبر واتساب.
 عربي وإنجليزي، فاتح وداكن، خط Janna فقط.
 
 ## الملفات
@@ -9,6 +9,7 @@ index.html              الصفحة كاملة (لا تحتاج أي مكتبة
 assets/janna.woff       خط Janna (الأساسي)
 assets/janna.ttf        خط Janna (احتياطي)
 assets/mazeed-logo.png  الشعار
+assets/mazeed-logo-light.png  الشعار للوضع الداكن
 CNAME                   ربط النطاق mazeed.com.ly
 README.md               هذا الملف
 ```
@@ -33,14 +34,15 @@ README.md               هذا الملف
 - إذا وُجدت سجلات A قديمة على @ تشير لاستضافة ليبيان سبايدر، احذفها.
 - الانتشار يأخذ من دقائق إلى 24 ساعة. بعدها فعّل Enforce HTTPS من صفحة Pages.
 
-## تعديل الروابط
+## تعديل الرقم والروابط
 في أعلى السكربت داخل index.html:
 ```
-var LINKS={survey:'https://kasimmahjoub.github.io/duri4/', results:'https://kasimmahjoub.github.io/duri4/results/', page:'https://mazeed.com.ly/#duri'};
+var CONTACT={ whatsapp:'218927678699', email:'info@mazeed.com.ly' };
+var LINKS={ survey:'https://kasimmahjoub.github.io/duri4/', results:'https://kasimmahjoub.github.io/duri4/results/', site:'https://mazeed.com.ly/#register' };
 ```
 عندما يعمل duri.mazeed.com.ly غيّر أول رابطين إلى:
 `https://duri.mazeed.com.ly/` و `https://duri.mazeed.com.ly/results/`
 
 ## روابط مباشرة
-- mazeed.com.ly يفتح تبويب مزيد
-- mazeed.com.ly/#duri يفتح تبويب دُوري
+- mazeed.com.ly/#register يفتح نموذج التسجيل
+- mazeed.com.ly/#refer يفتح نموذج ترشيح طالب
