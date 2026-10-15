@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-lang="ar" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مزيد للأبحاث والتدريب | Mazeed</title>
+<meta name="description" content="مزيد للأبحاث والتدريب، البيضاء، الجبل الأخضر. بيت سلسلة دُوري البحثية. هنا لا حدود للمزيد!">
+<meta property="og:title" content="مزيد للأبحاث والتدريب · Mazeed">
+<meta property="og:description" content="بيت خبرة للتدريب والبحث التطبيقي في الجبل الأخضر، وبيت سلسلة دُوري البحثية.">
+<meta property="og:url" content="https://mazeed.com.ly">
+<meta property="og:image" content="https://mazeed.com.ly/assets/mazeed-logo.png">
+<meta name="theme-color" content="#10069F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 20'%3E%3Ccircle cx='10' cy='10' r='9' fill='%2300B5D8'/%3E%3Ccircle cx='22' cy='10' r='9' fill='%232E6BE6'/%3E%3Ccircle cx='34' cy='10' r='9' fill='%2310069F'/%3E%3C/svg%3E">
+<style>
+/* Janna LT is the only face on the site (Arabic and Latin). Two sources of the same weight: woff first, ttf as fallback. */
+@font-face{font-family:'Janna';src:url(assets/janna.woff) format('woff'),url(assets/janna.ttf) format('truetype');font-weight:100 900;font-display:swap}
+
+:root{
+  --navy:#10069F;--blue:#2E6BE6;--cyan:#00B5D8;
+  --df:#2E6BE6;--kg:#E9A00B;--cf:#E8642A;--mt:#7A4FE0;
+  --f:'Janna',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+html[data-theme="light"]{
+  --bg:#F7F8FD;--bg2:#EEF0FA;--card:rgba(255,255,255,.72);--solid:#FFFFFF;
+  --fg:#0B0A24;--head:#0C0670;--mut:#545B78;--dim:#8F96B2;
+  --line:rgba(16,6,159,.10);--line2:rgba(16,6,159,.18);--acc:#10069F;--accfg:#FFFFFF;
+  --ctr:16,6,159;--glow1:rgba(0,181,216,.20);--glow2:rgba(46,107,230,.18);--glow3:rgba(16,6,159,.14);
+  --shadow:0 30px 60px -30px rgba(16,6,159,.25);
+}
+html[data-theme="dark"]{
+  --bg:#05041A;--bg2:#0A0830;--card:rgba(18,15,62,.62);--solid:#0D0B36;
+  --fg:#ECEEFF;--head:#FFFFFF;--mut:#A3A9D6;--dim:#6A72A8;
+  --line:rgba(160,170,255,.12);--line2:rgba(160,170,255,.22);--acc:#8EA2FF;--accfg:#05041A;
+  --ctr:0,181,216;--glow1:rgba(0,181,216,.22);--glow2:rgba(46,107,230,.22);--glow3:rgba(122,79,224,.20);
+  --shadow:0 30px 70px -30px rgba(0,0,0,.7);
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--f);background:var(--bg);color:var(--fg);line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .5s,color .5s;font-weight:700}
+html[data-lang="en"] body{line-height:1.65}
+img{max-width:100%;display:block}
+a{color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:4px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+h1,h2,h3{color:var(--head);font-weight:700;line-height:1.25;text-wrap:balance}
+p{color:var(--mut);font-weight:400}
+html[data-lang="ar"] p{font-weight:700;opacity:.92}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+
+/* ── language visibility ── */
+html:not([data-lang="en"]) [data-en]{display:none!important}
+html[data-lang="en"] [data-ar]{display:none!important}
+
+/* ── ambient background ── */
+.amb{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+.amb .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:1;will-change:transform}
+.amb .o1{width:52vw;height:52vw;background:var(--glow1);top:-18vw;inset-inline-start:-10vw;animation:drift1 26s ease-in-out infinite alternate}
+.amb .o2{width:46vw;height:46vw;background:var(--glow2);bottom:-20vw;inset-inline-end:-12vw;animation:drift2 32s ease-in-out infinite alternate}
+.amb .o3{width:34vw;height:34vw;background:var(--glow3);top:38%;inset-inline-start:40%;animation:drift3 38s ease-in-out infinite alternate}
+@keyframes drift1{to{transform:translate(12vw,10vh) scale(1.15)}}
+@keyframes drift2{to{transform:translate(-10vw,-12vh) scale(1.1)}}
+@keyframes drift3{to{transform:translate(-14vw,8vh) scale(.85)}}
+#topo{position:fixed;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none;opacity:.9}
+.grain{position:fixed;inset:-50%;z-index:-1;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 8s steps(8) infinite}
+html[data-theme="dark"] .grain{opacity:.09}
+@keyframes grain{0%,100%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-2%)}}
+#prog{position:fixed;top:0;inset-inline-start:0;height:2px;width:0;z-index:200;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--navy))}
+
+/* ── preloader ── */
+#pre{position:fixed;inset:0;z-index:999;background:var(--bg);display:grid;place-items:center;transition:opacity .6s,visibility .6s}
+#pre.gone{opacity:0;visibility:hidden}
+#pre .dots{display:flex;direction:ltr}
+#pre .dots i{width:22px;height:22px;border-radius:50%;margin-inline-start:-7px;animation:hop 1s var(--ease) infinite}
+#pre .dots i:nth-child(1){background:var(--cyan);margin:0}
+#pre .dots i:nth-child(2){background:var(--blue);animation-delay:.12s}
+#pre .dots i:nth-child(3){background:var(--navy);animation-delay:.24s}
+html[data-theme="dark"] #pre .dots i:nth-child(3){background:#6B7BFF}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-14px)}}
+
+/* ── trio mark ── */
+.trio{display:inline-flex;align-items:center;vertical-align:middle;direction:ltr}
+.trio i{border-radius:50%;width:10px;height:10px}
+.trio i:nth-child(1){background:var(--cyan)}
+.trio i:nth-child(2){background:var(--blue);margin-inline-start:-3px}
+.trio i:nth-child(3){background:var(--navy);margin-inline-start:-3px}
+html[data-theme="dark"] .trio i:nth-child(3){background:#6B7BFF}
+.trio.lg i{width:18px;height:18px;margin-inline-start:-6px}.trio.lg i:first-child{margin:0}
+
+/* ── header ── */
+header{position:fixed;top:env(safe-area-inset-top,0px);inset-inline:0;z-index:100;padding-top:14px}
+.bar{display:flex;align-items:center;gap:12px;height:62px;padding:0 10px 0 18px;border-radius:999px;border:1px solid transparent;transition:background .4s,border-color .4s,box-shadow .4s}
+html[dir="rtl"] .bar{padding:0 18px 0 10px}
+header.stuck .bar{background:var(--card);backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);border-color:var(--line);box-shadow:var(--shadow)}
+.logo{height:24px;width:auto;transition:filter .5s}
+html[data-theme="dark"] .logo{filter:brightness(0) invert(1)}
+.tabs{position:relative;display:flex;border:1px solid var(--line);border-radius:999px;padding:4px;background:var(--card);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);margin-inline-start:auto}
+.tabs button{position:relative;z-index:2;border:0;background:none;font-family:var(--f);font-weight:700;font-size:14px;padding:8px 22px;border-radius:999px;cursor:pointer;color:var(--mut);transition:color .3s;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--accfg)}
+.tabs .pill{position:absolute;z-index:1;top:4px;bottom:4px;border-radius:999px;background:var(--acc);transition:inset-inline-start .45s var(--ease),width .45s var(--ease)}
+.tools{display:flex;gap:6px;align-items:center}
+.ib{height:38px;min-width:38px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-family:var(--f);font-weight:700;font-size:13px;transition:.25s;backdrop-filter:blur(10px)}
+.ib:hover{border-color:var(--acc);color:var(--acc)}
+.ib svg{width:17px;height:17px}
+.ib .sun{display:none}html[data-theme="dark"] .ib .sun{display:block}html[data-theme="dark"] .ib .moon{display:none}
+@media(max-width:700px){.bar{height:56px;gap:6px}.logo{height:18px}.tabs button{padding:7px 13px;font-size:13px}.ib{height:34px;min-width:34px;padding:0 9px}}
+@media(max-width:400px){.logo{height:14px}.tabs button{padding:6px 10px}}
+
+/* ── hero ── */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:130px 0 70px}
+.hgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:48px;align-items:center;width:100%}.hgrid>*{min-width:0}
+@media(max-width:980px){.hgrid{grid-template-columns:minmax(0,1fr)}}
+.chip{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:var(--acc);border:1px solid var(--line2);background:var(--card);backdrop-filter:blur(10px);padding:7px 16px 7px 14px;border-radius:999px;margin-bottom:24px}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 0 rgba(0,181,216,.6);animation:ping 2s infinite}
+.chip.live i{background:#18C27A;box-shadow:0 0 0 0 rgba(24,194,122,.6);animation:pingg 1.6s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(0,181,216,0)}100%{box-shadow:0 0 0 0 rgba(0,181,216,0)}}
+@keyframes pingg{70%{box-shadow:0 0 0 10px rgba(24,194,122,0)}100%{box-shadow:0 0 0 0 rgba(24,194,122,0)}}
+.kick{font-size:13px;color:var(--dim);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.kick::before{content:"";width:40px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+h1{font-size:clamp(44px,7.6vw,108px);line-height:1.08;letter-spacing:-.01em}
+html[data-lang="en"] h1{letter-spacing:-.035em;line-height:1}
+h1 .l{display:block;overflow:hidden;padding-bottom:.06em}
+h1 .l>span{display:block;transform:translateY(110%);animation:up 1s var(--ease) forwards}
+@keyframes up{to{transform:none}}
+.grad{background-image:linear-gradient(100deg,var(--cyan),var(--blue) 45%,var(--navy));-webkit-background-clip:text;background-clip:text;color:transparent}
+html[data-theme="dark"] .grad{background-image:linear-gradient(100deg,#3FE0FF,#8EA2FF 50%,#B79CFF)}
+.slog{margin-top:26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:clamp(18px,2.2vw,26px);color:var(--acc);opacity:0;animation:fin 1s .7s forwards}
+@keyframes fin{to{opacity:1}}
+.lede{max-width:600px;margin-top:20px;font-size:17px;opacity:0;animation:fin 1s .85s forwards}
+.cta{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap;opacity:0;animation:fin 1s 1s forwards}
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;text-decoration:none;font-size:15px;font-weight:700;font-family:var(--f);transition:transform .35s var(--ease),box-shadow .35s,background .3s,color .3s;border:1px solid var(--acc);cursor:pointer;background:none;color:var(--acc);overflow:hidden}
+.btn svg{width:18px;height:18px;transition:transform .35s var(--ease)}
+.btn:hover svg{transform:translateX(-4px)}
+html[dir="ltr"] .btn:hover svg{transform:translateX(4px)}
+html[dir="ltr"] .btn svg.dir{transform:scaleX(-1)}
+html[dir="ltr"] .btn:hover svg.dir{transform:scaleX(-1) translateX(-4px)}
+.btn.solid{background:var(--acc);color:var(--accfg)}
+.btn.solid:hover{transform:translateY(-3px);box-shadow:0 18px 40px -16px var(--acc)}
+.btn.ghost:hover{background:var(--acc);color:var(--accfg)}
+.btn.live{background:linear-gradient(100deg,var(--cyan),var(--blue));border-color:transparent;color:#fff}
+.btn.live:hover{transform:translateY(-3px);box-shadow:0 18px 40px -14px var(--blue)}
+
+/* hero side card */
+.side{opacity:0;animation:fin 1s 1.15s forwards}
+.glass{background:var(--card);border:1px solid var(--line);border-radius:28px;backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.glass.spot::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(var(--ctr),.10),transparent 45%);opacity:0;transition:opacity .4s;pointer-events:none}
+.glass.spot:hover::before{opacity:1}
+.facts{padding:26px;display:grid;gap:18px}
+.fact{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:center}
+.fact .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(0,181,216,.16),rgba(46,107,230,.16));color:var(--acc)}
+.fact .ic svg{width:20px;height:20px}
+.fact b{display:block;color:var(--head);font-size:17px;line-height:1.35}
+.fact span{font-size:13px;color:var(--dim)}
+
+/* ── sections ── */
+section{padding:110px 0;position:relative}
+@media(max-width:700px){section{padding:72px 0}}
+.shead{margin-bottom:48px;max-width:820px}
+.snum{font-size:13px;color:var(--dim);display:flex;align-items:center;gap:12px;margin-bottom:14px}
+h2{font-size:clamp(30px,4.6vw,58px);line-height:1.22}
+html[data-lang="en"] h2{letter-spacing:-.025em;line-height:1.08}
+h3{font-size:20px;margin-bottom:6px}
+.sub{margin-top:16px;font-size:17px;max-width:680px}
+
+/* cards */
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:940px){.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.g3{grid-template-columns:1fr}}
+.c{padding:30px 28px;display:flex;flex-direction:column;gap:6px;transition:transform .45s var(--ease),border-color .3s}
+.c:hover{transform:translateY(-6px);border-color:var(--line2)}
+.tg{font-size:12px;color:var(--dim);letter-spacing:.04em;margin-bottom:8px;display:block}
+html[data-lang="en"] .tg{letter-spacing:.16em;text-transform:uppercase;font-size:11px}
+.c p{font-size:15px}
+.c .big{font-size:20px;color:var(--head)}
+
+/* elevation explorer (Mazeed tracks) */
+.elev{display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+@media(max-width:980px){.elev{grid-template-columns:1fr}}
+.eviz{position:relative;min-height:440px;background:linear-gradient(180deg,rgba(var(--ctr),.06),transparent)}
+.eviz svg{position:absolute;inset:0;width:100%;height:100%}
+.band{cursor:pointer;outline:none}
+.band rect{fill:transparent;transition:fill .4s}
+.band.on rect{fill:rgba(var(--ctr),.10)}
+.band:hover rect,.band:focus-visible rect{fill:rgba(var(--ctr),.06)}
+.bline{stroke:var(--line2);stroke-width:1;stroke-dasharray:3 6}
+.band.on .bline{stroke:var(--cyan);stroke-dasharray:none;stroke-width:1.5}
+.blab{font-family:var(--f);font-size:11px;fill:var(--dim)}
+.band.on .blab{fill:var(--cyan)}
+.ridge{fill:url(#rg);stroke:rgba(var(--ctr),.55);stroke-width:1.3}
+.ridge2{fill:none;stroke:rgba(var(--ctr),.25);stroke-width:1}
+.epeak{fill:var(--cyan)}
+.edetail{padding:44px;display:flex;flex-direction:column;justify-content:center;min-height:320px}
+@media(max-width:980px){.edetail{padding:30px 24px}.eviz{min-height:280px}}
+.epane{display:none}.epane.on{display:block;animation:wipe .55s var(--ease)}
+@keyframes wipe{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.eidx{font-size:64px;line-height:1;margin-bottom:6px}
+.epane h3{font-size:26px}
+.epane p{margin-top:10px;font-size:16px}
+.later{display:flex;align-items:center;gap:10px;margin-top:24px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+
+/* closing band */
+.band-cta{text-align:center;padding:64px 28px}
+.band-cta h2{margin:0 auto;max-width:760px}
+.band-cta p{margin:16px auto 0;max-width:560px;font-size:17px}
+.band-cta .cta{justify-content:center;opacity:1;animation:none}
+.mail{display:block;margin-top:14px;font-size:14px;color:var(--dim);direction:ltr}
+
+/* ══ DURI ══ */
+.dmark{font-family:var(--f);letter-spacing:-.02em}
+.gates4{display:flex;gap:8px;direction:ltr;margin-top:6px}
+.gates4 i{flex:1;height:8px;border-radius:8px}
+.live-card{padding:24px;display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.live-card .row{display:flex;align-items:center;gap:10px}
+.lk{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--solid);border-radius:16px;padding:8px 8px 8px 16px}
+html[dir="rtl"] .lk{padding:8px 16px 8px 8px}
+.lk .t{flex:1;min-width:0}
+.lk .t b{display:block;font-size:14.5px;color:var(--head);line-height:1.4}
+.lk .t span{display:block;font-size:12.5px;color:var(--dim);direction:ltr;text-align:start;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+html[dir="rtl"] .lk .t span{text-align:right}
+.cp,.go{width:40px;height:40px;flex:none;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--fg);display:grid;place-items:center;cursor:pointer;transition:.25s;text-decoration:none;position:relative}
+.cp:hover,.go:hover{border-color:var(--acc);color:var(--acc)}
+.cp svg,.go svg{width:18px;height:18px}
+.cp.ok{background:#18C27A;border-color:#18C27A;color:#fff}
+.cp .tip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translate(-50%,4px);background:var(--fg);color:var(--bg);font-size:12px;padding:4px 10px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s}
+.cp.ok .tip{opacity:1;transform:translate(-50%,0)}
+
+/* gates */
+.gates{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:980px){.gates{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.gates{grid-template-columns:1fr}}
+.gate{padding:26px 22px 24px;position:relative;cursor:default}
+.gate .n{font-size:54px;line-height:1;color:var(--g);opacity:.9}
+.gate .code{position:absolute;top:22px;inset-inline-end:22px;font-size:12px;color:var(--g);border:1px solid color-mix(in srgb,var(--g) 40%,transparent);padding:2px 10px;border-radius:999px;direction:ltr}
+.gate h3{margin-top:14px}
+.gate p{font-size:14.5px}
+.gate .q{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--head)}
+.gate::after{content:"";position:absolute;inset-inline:22px;bottom:0;height:3px;border-radius:3px 3px 0 0;background:var(--g);transform:scaleX(.18);transform-origin:var(--o,right);transition:transform .5s var(--ease)}
+html[dir="ltr"] .gate::after{--o:left}
+.gate:hover::after{transform:scaleX(1)}
+.split{display:flex;justify-content:space-between;margin-top:18px;font-size:13px;color:var(--dim);gap:10px;flex-wrap:wrap}
+.split b{color:var(--head)}
+
+/* timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}
+@media(max-width:980px){.tl{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.tl{grid-template-columns:1fr}}
+.st{padding:26px 24px;display:flex;flex-direction:column;gap:6px}
+.st .roman{font-size:46px;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;direction:ltr;text-align:start}
+.st .who{font-size:13px;color:var(--dim)}
+.st .stat{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--head)}
+.st .stat b{font-size:22px;display:block;line-height:1.2}
+.st.now{border-color:color-mix(in srgb,#18C27A 50%,transparent)}
+.st.now .roman{background:linear-gradient(135deg,#18C27A,var(--cyan));-webkit-background-clip:text;background-clip:text}
+.badge{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:#12A867;background:rgba(24,194,122,.12);padding:3px 11px;border-radius:999px;align-self:flex-start}
+.badge i{width:7px;height:7px;border-radius:50%;background:#18C27A;animation:pingg 1.6s infinite}
+
+/* numbers bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.bento .b{padding:26px;display:flex;flex-direction:column;gap:6px}
+.bento .b1{grid-column:span 3}.bento .b2{grid-column:span 3}.bento .b3{grid-column:span 2}.bento .b4{grid-column:span 2}.bento .b5{grid-column:span 2}
+@media(max-width:900px){.bento .b{grid-column:span 6!important}}
+.bento .num{font-size:clamp(40px,5.4vw,68px);line-height:1;color:var(--head);direction:ltr;text-align:start;font-variant-numeric:tabular-nums}
+html[dir="rtl"] .bento .num{text-align:right}
+.bento .num small{font-size:.45em;color:var(--dim);margin-inline-start:4px}
+.bento p{font-size:15px}
+.bento .src{font-size:12px;color:var(--dim);margin-top:auto;padding-top:10px}
+
+/* marquee */
+.marq{overflow:hidden;border-block:1px solid var(--line);padding:18px 0;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marq .tr{display:flex;gap:44px;width:max-content;animation:marq 40s linear infinite;direction:ltr}
+.marq span{font-size:clamp(22px,3vw,34px);color:var(--dim);white-space:nowrap;display:flex;align-items:center;gap:44px}
+.marq span::after{content:"";width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--blue))}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ── summary drawer ── */
+dialog#sum{border:0;padding:0;margin:0;max-width:none;max-height:none;width:min(640px,100vw);height:100dvh;inset-inline-start:auto;inset-inline-end:0;background:var(--solid);color:var(--fg);box-shadow:-30px 0 80px -20px rgba(0,0,0,.4)}
+html[dir="rtl"] dialog#sum{inset-inline-end:auto;inset-inline-start:0;margin-inline-start:0;margin-inline-end:auto}
+dialog#sum::backdrop{background:rgba(5,4,26,.45);backdrop-filter:blur(6px)}
+dialog#sum[open]{animation:slidein .5s var(--ease)}
+@keyframes slidein{from{transform:translateX(var(--sx,-100%))}to{transform:none}}
+html[dir="ltr"] dialog#sum{--sx:100%}
+.sh{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 24px;background:var(--solid);border-bottom:1px solid var(--line);z-index:2}
+.sh b{font-size:18px;color:var(--head)}
+.sb{padding:26px 24px 40px;display:grid;gap:22px}
+.sb h3{font-size:18px;display:flex;align-items:center;gap:10px}
+.sb h3 .rn{font-size:13px;color:var(--accfg);background:var(--acc);border-radius:8px;padding:1px 9px;direction:ltr}
+.sb p{font-size:15.5px}
+.sb .kv{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.sb .kv div{border:1px solid var(--line);border-radius:14px;padding:12px}
+.sb .kv b{display:block;font-size:22px;color:var(--head);direction:ltr;text-align:start}
+html[dir="rtl"] .sb .kv b{text-align:right}
+.sb .kv span{font-size:12px;color:var(--dim);line-height:1.5;display:block}
+.sb .quote{border-inline-start:3px solid var(--cyan);padding-inline-start:14px;color:var(--head);font-size:16px}
+.sb .acts{display:flex;gap:10px;flex-wrap:wrap}
+
+/* footer */
+footer{padding:60px 0 36px;border-top:1px solid var(--line);margin-top:20px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+footer p{font-size:14px;margin-top:12px;max-width:360px}
+footer h4{font-size:12px;color:var(--dim);margin-bottom:10px;font-weight:700}
+footer a{text-decoration:none;font-size:14px;color:var(--head);direction:ltr;display:inline-block}
+footer a:hover{color:var(--acc)}
+.flogo{height:22px}
+html[data-theme="dark"] .flogo{filter:brightness(0) invert(1)}
+.fe{border-top:1px solid var(--line);margin-top:30px;padding-top:18px;font-size:12px;color:var(--dim);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;width:100%}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+
+/* toast */
+#toast{position:fixed;bottom:calc(24px + env(safe-area-inset-bottom,0px));left:50%;transform:translate(-50%,30px);background:var(--fg);color:var(--bg);padding:10px 18px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:.35s var(--ease);z-index:300}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+
+<div class="amb" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<canvas id="topo" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div id="prog" aria-hidden="true"></div>
+<div id="pre" aria-hidden="true"><div class="dots"><i></i><i></i><i></i></div></div>
+
+<header id="hd"><div class="wrap"><div class="bar">
+  <a href="#mazeed" data-go="mazeed" aria-label="Mazeed"><img class="logo" src="assets/mazeed-logo.png" alt="Mazeed"></a>
+  <div class="tabs" role="tablist" aria-label="Sections" id="tabs"><div class="pill" id="pill"></div>
+    <button role="tab" id="t-mazeed" aria-controls="p-mazeed" aria-selected="true"><span data-ar>مزيد</span><span data-en>Mazeed</span></button>
+    <button role="tab" id="t-duri" aria-controls="p-duri" aria-selected="false"><span data-ar>دُوري</span><span data-en>DURI</span></button>
+  </div>
+  <div class="tools">
+    <button class="ib" id="th" aria-label="Light or dark"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button>
+    <button class="ib" id="lg" aria-label="Language">EN</button>
+  </div>
+</div></div></header>
+
+<main>
+<!-- ═════════════════ MAZEED ═════════════════ -->
+<div id="p-mazeed" role="tabpanel" aria-labelledby="t-mazeed">
+  <div class="hero"><div class="wrap"><div class="hgrid">
+    <div>
+      <div class="chip"><i></i><span data-ar>نطلق قريبًا</span><span data-en>Launching soon</span></div>
+      <div class="kick"><span data-ar>البيضاء · الجبل الأخضر · ليبيا</span><span data-en>Al-Bayda · Al-Jabal Al-Akhdar · Libya</span></div>
+      <h1>
+        <span class="l"><span style="animation-delay:.15s"><span data-ar>نرسم الطريق</span><span data-en>We map the route</span></span></span>
+        <span class="l"><span style="animation-delay:.28s"><span data-ar>من السؤال</span><span data-en>from the question</span></span></span>
+        <span class="l"><span style="animation-delay:.41s" class="grad"><span data-ar>إلى القرار.</span><span data-en>to the decision.</span></span></span>
+      </h1>
+      <div class="slog"><span class="trio lg"><i></i><i></i><i></i></span><span data-ar>هنا لا حدود للمزيد!</span><span data-en>Here, there are no limits to more!</span></div>
+      <p class="lede"><span data-ar>بيت خبرة للبحث التطبيقي والتدريب التخصصي في الجبل الأخضر. ننتج المعرفة في الميدان، ونعلّم كيف تصل إلى من يحتاجها، حضوريًا في البيضاء أو عن بُعد أينما كنت.</span><span data-en>A house of expertise for applied research and specialised training in Al-Jabal Al-Akhdar. We produce knowledge in the field and teach how it reaches the people who need it, on site in Al-Bayda or online wherever you are.</span></p>
+      <div class="cta">
+        <a class="btn solid" href="#tracks"><span data-ar>استكشف المسارات</span><span data-en>Explore the tracks</span><svg class="dir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <a class="btn ghost" href="#duri" data-go="duri"><span data-ar>تعرّف على دُوري</span><span data-en>Discover DURI</span></a>
+      </div>
+    </div>
+    <div class="side"><div class="glass spot facts">
+      <div class="fact"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-12 4 7 3-5 5 10z"/></svg></span><div><b><span data-ar>البيضاء</span><span data-en>Al-Bayda</span></b><span data-ar>مقرّنا في الجبل الأخضر</span><span data-en>our base in the Green Mountain</span></div></div>
+      <div class="fact"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M8.5 11h5M11 8.5v5"/></svg></span><div><b><span data-ar>بحث تطبيقي</span><span data-en>Applied research</span></b><span data-ar>بيت سلسلة دُوري الوطنية</span><span data-en>home of the national DURI series</span></div></div>
+      <div class="fact"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><div><b><span data-ar>حضوري وعن بُعد</span><span data-en>On site and online</span></b><span data-ar>نفس المحتوى ونفس الجودة</span><span data-en>same content, same standard</span></div></div>
+      <div class="fact"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h9M8.5 3v2M6 5c1 4 4 7 7 8M11 5c-1 4-4 7-7 8M13 21l4-10 4 10M14.5 17h5"/></svg></span><div><b><span data-ar>عربي و English</span><span data-en>Arabic and English</span></b><span data-ar>تدريب وتقارير بلغتين</span><span data-en>training and reports in both</span></div></div>
+    </div></div>
+  </div></div></div>
+
+  <section>
+    <div class="wrap">
+      <div class="shead rv">
+        <div class="snum"><span class="trio"><i></i><i></i><i></i></span><span data-ar>من نحن</span><span data-en>About</span></div>
+        <h2><span data-ar>نبدأ من فجوة حقيقية، لا من فكرة عامة.</span><span data-en>We start from a real gap, <span class="grad">not a general idea.</span></span></h2>
+        <p class="sub"><span data-ar>في الجبل الأخضر طموح أكاديمي ومهني كبير، ومسافة واضحة بينه وبين الأدوات اللازمة لتحقيقه. ومن أبحاثنا نعرف أن المعرفة الجيدة وحدها لا تكفي، فأغلبها يضيع في الطريق إلى القرار. مزيد وُجد ليقطع هذه المسافة.</span><span data-en>Al-Jabal Al-Akhdar holds great academic and professional ambition, and a clear distance between it and the tools to reach it. Our own research shows good knowledge is not enough: most of it is lost on the way to the decision. Mazeed exists to close that distance.</span></p>
+      </div>
+      <div class="g3">
+        <div class="glass spot c rv"><span class="tg"><span data-ar>الرسالة</span><span data-en>Mission</span></span><h3><span data-ar>جسر احترافي</span><span data-en>A professional bridge</span></h3><p><span data-ar>نصل الطموح بالمهارة والأداة، بمعايير جودة واضحة وخبرة تنفيذية حقيقية لا نظرية.</span><span data-en>We connect ambition with skill and tools, to clear quality standards and real delivery experience rather than theory.</span></p></div>
+        <div class="glass spot c rv d1"><span class="tg"><span data-ar>الاسم</span><span data-en>The name</span></span><h3><span data-ar>لماذا «مزيد»؟</span><span data-en>Why “Mazeed”?</span></h3><p><span data-ar>كل خدمة نقدمها بداية لشيء أكبر، لا نهاية في ذاتها. متدرّب اليوم هو باحث الغد وشريك المستقبل.</span><span data-en>Every service is the beginning of something larger. Today's trainee is tomorrow's researcher and partner.</span></p></div>
+        <div class="glass spot c rv d2"><span class="tg"><span data-ar>المنهج</span><span data-en>Approach</span></span><h3><span data-ar>من الميدان إلى القاعة</span><span data-en>From the field to the room</span></h3><p><span data-ar>ما نعلّمه مارسناه أولًا: في المياه والأرض والمناخ، وفي كتابة السياسات الوطنية والعمل مع البلديات.</span><span data-en>What we teach, we practised first: in water, land and climate, in national policy writing and in work with municipalities.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tracks">
+    <div class="wrap">
+      <div class="shead rv">
+        <div class="snum"><span class="trio"><i></i><i></i><i></i></span><span data-ar>المسارات</span><span data-en>Tracks</span></div>
+        <h2><span data-ar>أربعة مستويات، من السفح إلى القمة.</span><span data-en>Four elevations, <span class="grad">from foothill to summit.</span></span></h2>
+        <p class="sub"><span data-ar>خدماتنا ارتفاعات متتالية على مسار واحد. اختر مستوى على المقطع لتستعرضه.</span><span data-en>Our services are successive elevations on one ascent. Select a level on the profile to open it.</span></p>
+      </div>
+      <div class="glass elev rv">
+        <div class="eviz">
+          <svg viewBox="0 0 400 520" preserveAspectRatio="none">
+            <defs><linearGradient id="rg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="rgb(46,107,230)" stop-opacity=".02"/><stop offset="1" stop-color="rgb(0,181,216)" stop-opacity=".22"/></linearGradient></defs>
+            <path class="ridge" d="M0,520 L0,470 C40,462 70,448 100,410 C128,374 150,352 182,300 C210,254 232,212 262,150 C286,100 310,62 340,34 C362,14 380,6 400,2 L400,520 Z"/>
+            <path class="ridge2" d="M0,494 C46,486 82,470 116,432 C146,398 168,372 200,322 C228,278 252,236 282,176 C306,128 330,90 360,58"/>
+            <path class="ridge2" d="M0,512 C34,506 62,494 92,462 C120,432 142,408 176,356"/>
+            <g class="band on" data-b="e1" tabindex="0" role="button" aria-label="01"><rect x="0" y="390" width="400" height="130"/><line class="bline" x1="0" y1="390" x2="400" y2="390"/><text class="blab" x="14" y="410">01 · 0 to 400 m</text></g>
+            <g class="band" data-b="e2" tabindex="0" role="button" aria-label="02"><rect x="0" y="260" width="400" height="130"/><line class="bline" x1="0" y1="260" x2="400" y2="260"/><text class="blab" x="14" y="280">02 · 400 to 700 m</text></g>
+            <g class="band" data-b="e3" tabindex="0" role="button" aria-label="03"><rect x="0" y="130" width="400" height="130"/><line class="bline" x1="0" y1="130" x2="400" y2="130"/><text class="blab" x="14" y="150">03 · 700 to 850 m</text></g>
+            <g class="band" data-b="e4" tabindex="0" role="button" aria-label="04"><rect x="0" y="0" width="400" height="130"/><line class="bline" x1="0" y1="0" x2="400" y2="0"/><text class="blab" x="14" y="22">04 · 850 m +</text></g>
+            <circle class="epeak" cx="392" cy="6" r="4.5"/>
+          </svg>
+        </div>
+        <div class="edetail">
+          <div class="epane on" id="e1"><div class="eidx grad">01</div><h3><span data-ar>الدعم الأكاديمي</span><span data-en>Academic support</span></h3><p><span data-ar>بوابة الدخول. نرافق طلبة الدراسات العليا من أول سؤال بحثي إلى يوم المناقشة، ونعلّمهم أن يكتبوا لمستخدم محدد منذ البداية.</span><span data-en>The entry point. We walk graduate students from the first research question to defence day, and teach them to write for a defined user from the start.</span></p><div class="later"><span class="trio"><i></i><i></i><i></i></span><span data-ar>البرامج والتفاصيل عند الإطلاق</span><span data-en>Programmes announced at launch</span></div></div>
+          <div class="epane" id="e2"><div class="eidx grad">02</div><h3><span data-ar>الدورات التقنية التخصصية</span><span data-en>Specialised technical courses</span></h3><p><span data-ar>دورات في المياه والأرض والمناخ والتحليل المكاني، يقودها من مارسها فعلًا في الميدان، لا دورات عامة يمكن لأي مركز تقديمها.</span><span data-en>Courses in water, land, climate and spatial analysis, led by practitioners who delivered them in the field, not generic courses any centre could run.</span></p><div class="later"><span class="trio"><i></i><i></i><i></i></span><span data-ar>البرامج والتفاصيل عند الإطلاق</span><span data-en>Programmes announced at launch</span></div></div>
+          <div class="epane" id="e3"><div class="eidx grad">03</div><h3><span data-ar>البحث والاستشارات المؤسسية</span><span data-en>Research and institutional consultancy</span></h3><p><span data-ar>دراسات ميدانية واستبيانات تفاعلية ولوحات متابعة حية، للمنظمات والجهات العامة والقطاع الخاص. الأدوات نفسها التي بنينا بها سلسلة دُوري.</span><span data-en>Field studies, interactive surveys and live monitoring dashboards for organisations, public bodies and the private sector. The same tools we built the DURI series with.</span></p><div class="later"><span class="trio"><i></i><i></i><i></i></span><span data-ar>للاستفسار المؤسسي راسلنا مباشرة</span><span data-en>Institutional enquiries by email</span></div></div>
+          <div class="epane" id="e4"><div class="eidx grad">04</div><h3><span data-ar>المسار الرقمي</span><span data-en>Digital track</span></h3><p><span data-ar>القمة بلا حدود جغرافية. نفس المحتوى ونفس المدرب، بوصول يتجاوز البيضاء إلى ليبيا كلها والمنطقة.</span><span data-en>The summit with no geographic limit. The same content and trainer, reaching beyond Al-Bayda across Libya and the region.</span></p><div class="later"><span class="trio"><i></i><i></i><i></i></span><span data-ar>البرامج والتفاصيل عند الإطلاق</span><span data-en>Programmes announced at launch</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="glass band-cta rv">
+        <div class="snum" style="justify-content:center"><span class="trio"><i></i><i></i><i></i></span><span data-ar>قريبًا</span><span data-en>Soon</span></div>
+        <h2><span data-ar>الصعود يبدأ قريبًا.</span><span data-en>The ascent <span class="grad">begins soon.</span></span></h2>
+        <p><span data-ar>نضع اللمسات الأخيرة على برامجنا الأولى. وحتى ذلك الحين، شارك في سلسلة دُوري البحثية المفتوحة الآن.</span><span data-en>We are finalising our first programmes. Until then, take part in the DURI research series, open now.</span></p>
+        <div class="cta">
+          <a class="btn solid" href="mailto:info@mazeed.com.ly"><span data-ar>تواصل معنا</span><span data-en>Get in touch</span></a>
+          <a class="btn ghost" href="#duri" data-go="duri"><span data-ar>اذهب إلى دُوري</span><span data-en>Go to DURI</span></a>
+        </div>
+        <span class="mail">info@mazeed.com.ly</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═════════════════ DURI ═════════════════ -->
+<div id="p-duri" role="tabpanel" aria-labelledby="t-duri" hidden>
+  <div class="hero"><div class="wrap"><div class="hgrid">
+    <div>
+      <div class="chip live"><i></i><span data-ar>دُوري 4 · الاستبيان مفتوح الآن</span><span data-en>DURI 4 · survey open now</span></div>
+      <div class="kick"><span data-ar>سلسلة بحثية وطنية مستقلة · ليبيا 2025 إلى 2026</span><span data-en>An independent national research series · Libya 2025 to 2026</span></div>
+      <h1>
+        <span class="l"><span style="animation-delay:.15s" class="dmark"><span data-ar>دُوري</span><span data-en>DURI</span></span></span>
+        <span class="l"><span style="animation-delay:.3s;font-size:.42em;line-height:1.35" class="grad"><span data-ar>من يُسمع صوته في القرار المناخي الليبي؟</span><span data-en>Who is heard in Libya's climate decisions?</span></span></span>
+      </h1>
+      <div class="gates4" style="max-width:260px;margin-top:22px;opacity:0;animation:fin 1s .6s forwards"><i style="background:var(--df)"></i><i style="background:var(--kg)"></i><i style="background:var(--cf)"></i><i style="background:var(--mt)"></i></div>
+      <p class="lede"><span data-ar>«دُوري» هو مؤشر الجاهزية للاستخدام في القرار. يتتبع رحلة المعرفة المناخية من لحظة إنتاجها إلى لحظة وصولها لصاحب القرار، أو ضياعها في الطريق. ثلاث دراسات على ثلاث فئات، وجواب واحد يتكرر: الاعتراف المؤسسي هو ما يقرر من يدخل الغرفة.</span><span data-en>DURI, the Decision-Use Readiness Index, traces climate knowledge from the moment it is produced to the moment it reaches a decision-maker, or is lost on the way. Three studies on three groups, one recurring answer: institutional recognition decides who enters the room.</span></p>
+      <div class="cta">
+        <a class="btn live" href="#" data-link="survey" target="_blank" rel="noopener"><span data-ar>شارك في دُوري 4</span><span data-en>Take part in DURI 4</span><svg class="dir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+        <button class="btn ghost" type="button" data-open="sum"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2zM8 7h6M8 11h6"/></svg><span data-ar>اقرأ ملخص الدراسة</span><span data-en>Read the study summary</span></button>
+      </div>
+    </div>
+    <div class="side"><div class="glass spot live-card">
+      <div class="row" style="justify-content:space-between"><b style="color:var(--head)"><span data-ar>روابط دُوري</span><span data-en>DURI links</span></b><span class="trio"><i></i><i></i><i></i></span></div>
+      <div class="lk"><div class="t"><b><span data-ar>استبيان دُوري 4: الأكاديميا</span><span data-en>DURI 4 survey: academia</span></b><span data-url="survey"></span></div>
+        <button class="cp" type="button" data-copy="survey" aria-label="Copy link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/></svg><span class="tip"><span data-ar>تم النسخ</span><span data-en>Copied</span></span></button>
+        <a class="go" data-link="survey" href="#" target="_blank" rel="noopener" aria-label="Open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></div>
+      <div class="lk"><div class="t"><b><span data-ar>تأثير دُوري: نتائج الدراسات الثلاث</span><span data-en>The DURI Effect: findings of the three studies</span></b><span data-url="results"></span></div>
+        <button class="cp" type="button" data-copy="results" aria-label="Copy link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/></svg><span class="tip"><span data-ar>تم النسخ</span><span data-en>Copied</span></span></button>
+        <a class="go" data-link="results" href="#" target="_blank" rel="noopener" aria-label="Open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></div>
+      <div class="lk"><div class="t"><b><span data-ar>هذه الصفحة</span><span data-en>This page</span></b><span data-url="page"></span></div>
+        <button class="cp" type="button" data-copy="page" aria-label="Copy link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/></svg><span class="tip"><span data-ar>تم النسخ</span><span data-en>Copied</span></span></button></div>
+      <p style="font-size:13px"><span data-ar>من 5 إلى 15 دقيقة · الاسم اختياري · النتائج تُنشر مجمّعة</span><span data-en>5 to 15 minutes · name optional · results published in aggregate</span></p>
+    </div></div>
+  </div></div></div>
+
+  <div class="marq" aria-hidden="true"><div class="tr">
+    <span>Decision Fitness</span><span>صلاحية القرار</span><span>Knowledge Governance</span><span>حوكمة المعرفة</span><span>Channel Fit</span><span>مواءمة القنوات</span><span>Mutual Trust</span><span>الثقة المتبادلة</span>
+    <span>Decision Fitness</span><span>صلاحية القرار</span><span>Knowledge Governance</span><span>حوكمة المعرفة</span><span>Channel Fit</span><span>مواءمة القنوات</span><span>Mutual Trust</span><span>الثقة المتبادلة</span>
+  </div></div>
+
+  <section>
+    <div class="wrap">
+      <div class="shead rv">
+        <div class="snum"><span class="trio"><i></i><i></i><i></i></span><span data-ar>الإطار</span><span data-en>The framework</span></div>
+        <h2><span data-ar>أربع بوابات تعبرها المعرفة قبل أن تصبح قرارًا.</span><span data-en>Four gates knowledge must cross <span class="grad">before it becomes a decision.</span></span></h2>
+        <p class="sub"><span data-ar>بُني المؤشر على نموذج Cash وزملائه (2003): الصلة والمصداقية والشرعية. وفي ليبيا قسّمنا الشرعية إلى بُعدين، إجرائي وعلائقي، لأن تعدد السلطات وتبدل القيادات يجعلان الطريق والعلاقة شيئين مختلفين.</span><span data-en>The index builds on Cash et al. (2003): salience, credibility and legitimacy. In Libya we split legitimacy into a procedural and a relational dimension, because divided authority and fast turnover make the route and the relationship two different things.</span></p>
+      </div>
+      <div class="gates">
+        <div class="glass spot gate rv" style="--g:var(--df)"><span class="code">DF</span><div class="n">1</div><h3><span data-ar>صلاحية القرار</span><span data-en>Decision Fitness</span></h3><p><span data-ar>من الصلة</span><span data-en>from salience</span></p><div class="q"><span data-ar>هل كُتبت المعرفة لقرار بعينه وجهة بعينها وتوقيت بعينه؟</span><span data-en>Was the knowledge written for a specific decision, body and moment?</span></div></div>
+        <div class="glass spot gate rv d1" style="--g:var(--kg)"><span class="code">KG</span><div class="n">2</div><h3><span data-ar>حوكمة المعرفة</span><span data-en>Knowledge Governance</span></h3><p><span data-ar>من المصداقية</span><span data-en>from credibility</span></p><div class="q"><span data-ar>هل المنهجية موثقة، والمصادر شفافة، والبيانات قابلة للتحقق؟</span><span data-en>Is the method documented, the sourcing transparent, the data verifiable?</span></div></div>
+        <div class="glass spot gate rv d2" style="--g:var(--cf)"><span class="code">CF</span><div class="n">3</div><h3><span data-ar>مواءمة القنوات</span><span data-en>Channel Fit</span></h3><p><span data-ar>من الشرعية الإجرائية</span><span data-en>from procedural legitimacy</span></p><div class="q"><span data-ar>هل سافرت المعرفة عبر القناة التي تعترف بها الجهة المستهدفة؟</span><span data-en>Did it travel through the channel the target body recognises?</span></div></div>
+        <div class="glass spot gate rv d3" style="--g:var(--mt)"><span class="code">MT</span><div class="n">4</div><h3><span data-ar>الثقة المتبادلة</span><span data-en>Mutual Trust</span></h3><p><span data-ar>من الشرعية العلائقية</span><span data-en>from relational legitimacy</span></p><div class="q"><span data-ar>هل توجد علاقة قائمة قبل وصول المنتج وبعده؟</span><span data-en>Is there a relationship before and after the product arrives?</span></div></div>
+      </div>
+      <div class="split rv"><span><b><span data-ar>البوابتان الأوليان:</span><span data-en>Gates 1 and 2:</span></b> <span data-ar>جودة الإنتاج</span><span data-en>quality of production</span></span><span><b><span data-ar>البوابتان الأخيرتان:</span><span data-en>Gates 3 and 4:</span></b> <span data-ar>جودة الوصول</span><span data-en>quality of reach</span></span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="shead rv">
+        <div class="snum"><span class="trio"><i></i><i></i><i></i></span><span data-ar>السلسلة</span><span data-en>The series</span></div>
+        <h2><span data-ar>أربع ركائز، أداة واحدة.</span><span data-en>Four pillars, <span class="grad">one instrument.</span></span></h2>
+      </div>
+      <div class="tl">
+        <div class="glass spot st rv"><div class="roman">I</div><span class="who"><span data-ar>منشورة · ICCCASARC، نوفمبر 2025</span><span data-en>Published · ICCCASARC, November 2025</span></span><h3><span data-ar>المجتمع المدني</span><span data-en>Civil society</span></h3><p><span data-ar>هندسة الثقة المناخية في ليبيا: مسح وطني للمنظمات ولجنة خبراء لأوزان المؤشر.</span><span data-en>Engineering Climate Trust in Libya: a national survey of organisations and an expert panel for the index weights.</span></p><div class="stat"><b class="ltr">78</b><span data-ar>منظمة مجتمع مدني</span><span data-en>civil society organisations</span></div></div>
+        <div class="glass spot st rv d1"><div class="roman">II</div><span class="who"><span data-ar>رسم الفجوة · 2026</span><span data-en>Mapping the Gap · 2026</span></span><h3><span data-ar>الوثائق الوطنية</span><span data-en>National documents</span></h3><p><span data-ar>الأبعاد نفسها على الخطة الوطنية للتكيف والمساهمة المحددة وطنيًا والبلاغ الوطني الأول، مع مؤشر جديد للفجوة: PPDI.</span><span data-en>The same dimensions applied to the NAP, the NDC and the first National Communication, with a new gap measure: the PPDI.</span></p><div class="stat"><b class="ltr">3</b><span data-ar>وثائق وطنية مرمّزة</span><span data-en>national documents coded</span></div></div>
+        <div class="glass spot st rv d2"><div class="roman">III</div><span class="who"><span data-ar>2026</span><span data-en>2026</span></span><h3><span data-ar>الشباب</span><span data-en>Youth</span></h3><p><span data-ar>هل يصلح التعريف العمري للشباب في ليبيا؟ البيانات تقول إن الاعتراف، لا العمر، هو ما يفرّق الفاعل عن غيره.</span><span data-en>Does the age-based definition of youth fit Libya? The data says recognition, not age, separates actors from others.</span></p><div class="stat"><b class="ltr">160</b><span data-ar>شابًا وشابة</span><span data-en>young people</span></div></div>
+        <div class="glass spot st now rv d3"><div class="roman">IV</div><span class="badge"><i></i><span data-ar>جارية الآن</span><span data-en>Running now</span></span><h3><span data-ar>الأكاديميا</span><span data-en>Academia</span></h3><p><span data-ar>هل تصل معرفة الجامعة الليبية إلى القرار المناخي؟ الباحثون عن أنفسهم، والممارسون والجمهور عنهم، في مرآة واحدة.</span><span data-en>Does Libyan university knowledge reach climate decisions? Researchers on themselves, practitioners and the public on them, in one mirror.</span></p><div class="stat"><a class="btn live" style="padding:10px 18px;font-size:14px" href="#" data-link="survey" target="_blank" rel="noopener"><span data-ar>شارك الآن</span><span data-en>Take part now</span></a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="shead rv">
+        <div class="snum"><span class="trio"><i></i><i></i><i></i></span><span data-ar>بالأرقام</span><span data-en>In numbers</span></div>
+        <h2><span data-ar>ما وجدته الدراسات الثلاث الأولى.</span><span data-en>What the first three studies <span class="grad">found.</span></span></h2>
+      </div>
+      <div class="bento">
+        <div class="glass spot b b1 rv"><div class="num" data-count="34.6" data-dec="1">0<small>%</small></div><h3><span data-ar>معدل الاعتماد الرسمي</span><span data-en>Formal uptake rate</span></h3><p><span data-ar>من 78 منظمة قدّمت معرفة لجهة قرار، اعتُمد ما قدّمته 27 فقط خلال ستة أشهر، و42 لم تتلقَّ أي رد.</span><span data-en>Of 78 organisations that submitted knowledge to a decision body, only 27 were taken up within six months; 42 received no reply.</span></p><span class="src">DURI I</span></div>
+        <div class="glass spot b b2 rv d1"><div class="num">×<span data-count="3.07" data-dec="2">0</span></div><h3><span data-ar>الثقة أقوى منبئ بالاعتماد</span><span data-en>Trust is the strongest predictor</span></h3><p><span data-ar>كل نقطة في أطر التعاون الرسمية، كمذكرة تفاهم أو جهة اتصال محددة، تضاعف أرجحية الاعتماد ثلاث مرات.</span><span data-en>Each point of formal collaboration, such as an MoU or a named contact, triples the odds of uptake.</span></p><span class="src">DURI I</span></div>
+        <div class="glass spot b b3 rv"><div class="num" data-count="24.6" data-dec="1">0</div><h3><span data-ar>أكبر فجوة: الثقة</span><span data-en>Largest gap: trust</span></h3><p><span data-ar>الوثائق الوطنية تعترف بغياب الثقة ولا تقترح آلية دائمة لبنائها.</span><span data-en>National documents admit trust is missing but propose no lasting mechanism to build it.</span></p><span class="src">DURI II · PPDI</span></div>
+        <div class="glass spot b b4 rv d1"><div class="num">×<span data-count="9.7" data-dec="1">0</span></div><h3><span data-ar>الاعتراف يسبق الفعل</span><span data-en>Recognition comes first</span></h3><p><span data-ar>الشاب المعترف به مؤسسيًا يطرق باب الحكومة أكثر بنحو عشرة أضعاف.</span><span data-en>A recognised young person approaches government nearly ten times more often.</span></p><span class="src">DURI III</span></div>
+        <div class="glass spot b b5 rv d2"><div class="num" data-count="0" data-dec="0" data-text="0">0</div><h3><span data-ar>جلسة تشاور في الجنوب</span><span data-en>consultations in the south</span></h3><p><span data-ar>تسع جلسات تشاور صاغت الخطط الوطنية، لم تُعقد واحدة منها في الجنوب.</span><span data-en>Nine consultations shaped the national plans; none was held in the south.</span></p><span class="src">DURI II</span></div>
+      </div>
+      <div class="cta rv" style="opacity:1;animation:none;justify-content:center;margin-top:40px">
+        <button class="btn solid" type="button" data-open="sum"><span data-ar>اقرأ ملخص الدراسة كاملًا</span><span data-en>Read the full study summary</span></button>
+        <a class="btn ghost" href="#" data-link="results" target="_blank" rel="noopener"><span data-ar>صفحة النتائج التفاعلية</span><span data-en>Interactive findings page</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="glass band-cta rv">
+        <div class="snum" style="justify-content:center"><span class="chip live" style="margin:0"><i></i><span data-ar>مفتوح الآن</span><span data-en>Open now</span></span></div>
+        <h2><span data-ar>الحلقة الأخيرة تنقصها شهادتك.</span><span data-en>The final study is missing <span class="grad">your voice.</span></span></h2>
+        <p><span data-ar>باحث في أي تخصص، أو تعمل في البيئة والمناخ، أو لا علاقة لك بالمناخ أصلًا. لكل فئة مسارها، والاستبيان يتحدث معك ويريك أين تقف في النهاية.</span><span data-en>A researcher in any field, working in environment and climate, or with no link to climate at all. Each has its own path, and the survey talks with you and shows where you stand at the end.</span></p>
+        <div class="cta">
+          <a class="btn live" href="#" data-link="survey" target="_blank" rel="noopener"><span data-ar>ابدأ الاستبيان</span><span data-en>Start the survey</span></a>
+          <button class="btn ghost" type="button" data-copy="survey" data-toast="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/></svg><span data-ar>انسخ الرابط وشاركه</span><span data-en>Copy and share the link</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<!-- ═════════════════ SUMMARY DRAWER ═════════════════ -->
+<dialog id="sum" aria-labelledby="sumT">
+  <div class="sh"><b id="sumT"><span data-ar>ملخص سلسلة دُوري</span><span data-en>DURI series summary</span></b><button class="ib" type="button" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="sb">
+    <p class="quote"><span data-ar>المعرفة التي لا تصل لا تختلف كثيرًا عن المعرفة التي لم تُنتَج.</span><span data-en>Knowledge that does not arrive is not very different from knowledge never produced.</span></p>
+    <p><span data-ar>في ليبيا لا ينقص العمل المناخي من يكتب: المنظمات تُصدر التقارير، والشباب يطلقون المبادرات، والجامعات تُخرّج الرسائل، والدولة أصدرت أول خطة وطنية للتكيف وأول مساهمة محددة وطنيًا وأول بلاغ وطني. ويبقى السؤال: ماذا يحدث لهذه المعرفة بعد أن تُكتب؟ سلسلة دُوري برنامج بحثي وطني مستقل، بُني بالعمل الميداني، يتتبع هذا الطريق.</span><span data-en>Libyan climate action has no shortage of writers: organisations publish reports, young people launch initiatives, universities graduate theses, and the state issued its first NAP, NDC and National Communication. The question remains: what happens to that knowledge once written? DURI is an independent, field-built national research programme that traces this route.</span></p>
+
+    <div><h3><span class="rn">I</span><span data-ar>المجتمع المدني</span><span data-en>Civil society</span></h3>
+      <p><span data-ar>من بين 78 منظمة قدّمت منتجًا معرفيًا لجهة قرار، اعتُمد ما قدّمته 27 فقط. الفارق لم يكن في حجم المنظمة ولا قدراتها البحثية، بل في تسمية الجهة والشخص، والكتاب الرسمي، والمتابعة، وتاريخ التعاون السابق. وأطر التعاون الرسمية كانت أقوى منبئ بالاعتماد.</span><span data-en>Of 78 organisations that submitted knowledge to a decision body, only 27 were taken up. The difference was not size or research capacity but naming the body and person, a formal letter, follow-up and prior collaboration. Formal collaboration frameworks were the strongest predictor of uptake.</span></p>
+      <div class="kv"><div><b>34.6%</b><span data-ar>معدل الاعتماد</span><span data-en>uptake rate</span></div><div><b>×3.07</b><span data-ar>أثر أطر التعاون</span><span data-en>collaboration effect</span></div><div><b>45.8%</b><span data-ar>الغرب، مقابل 25% للجنوب</span><span data-en>west, vs 25% south</span></div></div></div>
+
+    <div><h3><span class="rn">II</span><span data-ar>الوثائق الوطنية</span><span data-en>National documents</span></h3>
+      <p><span data-ar>طبّقنا الأبعاد نفسها على نصوص الخطط الوطنية، وقسنا المسافة بين ما تَعِد به الوثائق وما تعيشه المنظمات بمؤشر جديد: مؤشر تباعد السياسة والممارسة (PPDI). أكبر تباعد جاء في الثقة المتبادلة، وفي اتجاه غير متوقع: الناس يبنون علاقات أفضل مما تصممه الوثائق، لكنها علاقات شخصية تنتهي بانتهاء المنصب.</span><span data-en>We applied the same dimensions to the national plans and measured the distance between what documents promise and what organisations live, with a new measure: the Policy-Practice Divergence Index (PPDI). The largest divergence was in mutual trust, in an unexpected direction: people build better relationships than the documents design, but personal ones that end when the official leaves.</span></p>
+      <div class="kv"><div><b>24.6</b><span data-ar>فجوة الثقة من 100</span><span data-en>trust gap out of 100</span></div><div><b>9</b><span data-ar>جلسات تشاور</span><span data-en>consultations</span></div><div><b>0</b><span data-ar>منها في الجنوب</span><span data-en>held in the south</span></div></div></div>
+
+    <div><h3><span class="rn">III</span><span data-ar>الشباب</span><span data-en>Youth</span></h3>
+      <p><span data-ar>العمر لا يفرّق بين من يعرّف نفسه فاعلًا مناخيًا ومن لا يفعل. ما يفرّق هو الاعتراف: من اعترفت به جهة طرق باب الحكومة أكثر بنحو عشرة أضعاف. والاعتراف يسبق القناعة: يعترف بالشاب أحد أولًا، ثم يتصرف كفاعل، ثم يقتنع.</span><span data-en>Age does not separate those who call themselves climate actors from those who do not. Recognition does: those recognised by an institution approached government nearly ten times more often. Recognition comes before conviction: someone recognises the young person, they act, then they believe it.</span></p>
+      <div class="kv"><div><b>×9.7</b><span data-ar>أثر الاعتراف</span><span data-en>recognition effect</span></div><div><b>2.30</b><span data-ar>الثقة بالحكومة من 5</span><span data-en>trust in government /5</span></div><div><b>54%</b><span data-ar>من شباب الجنوب بلا اعتراف</span><span data-en>of southern youth unrecognised</span></div></div></div>
+
+    <div><h3><span class="rn">IV</span><span data-ar>الأكاديميا · جارية الآن</span><span data-en>Academia · running now</span></h3>
+      <p><span data-ar>الحلقة الرابعة والأخيرة تسأل الطرف الذي يُفترض أنه مصدر المعرفة الأول: هل يكتب الباحث الليبي ليُستخدم ما يكتبه؟ وهل يثق به من يعمل في الميدان؟ وهل يحكمه الاعتراف المؤسسي كما حكم غيره، أم أن الشهادة هي الاستثناء؟ تُنشر النتائج بعد اكتمال جمع البيانات.</span><span data-en>The fourth and final study asks the group meant to be the first source of knowledge: do Libyan researchers write to be used? Do practitioners trust them? Does institutional recognition govern them as it did others, or is the degree the exception? Findings will be published once data collection closes.</span></p></div>
+
+    <p class="quote"><span data-ar>السؤال لم يعد «من هو الفاعل المناخي؟» بل «من يملك سلطة منح الاعتراف، وبأي معايير؟».</span><span data-en>The question is no longer “who is a climate actor?” but “who holds the power to grant recognition, and by what criteria?”</span></p>
+    <div class="acts">
+      <a class="btn live" href="#" data-link="survey" target="_blank" rel="noopener"><span data-ar>شارك في دُوري 4</span><span data-en>Take part in DURI 4</span></a>
+      <a class="btn ghost" href="#" data-link="results" target="_blank" rel="noopener"><span data-ar>صفحة النتائج التفاعلية</span><span data-en>Interactive findings page</span></a>
+    </div>
+    <p style="font-size:12.5px;color:var(--dim)"><span data-ar>المصادر: Mahjoub (2025)، ICCCASARC · رسم الفجوة، 2026 · مسح الشباب، 2026.</span><span data-en>Sources: Mahjoub (2025), ICCCASARC · Mapping the Gap, 2026 · Youth survey, 2026.</span></p>
+  </div>
+</dialog>
+
+<footer>
+  <div class="wrap">
+    <div><img class="flogo" src="assets/mazeed-logo.png" alt="Mazeed"><p><span data-ar>مزيد للأبحاث والتدريب · البيضاء، الجبل الأخضر، ليبيا. بيت سلسلة دُوري البحثية.</span><span data-en>Mazeed Research &amp; Training · Al-Bayda, Al-Jabal Al-Akhdar, Libya. Home of the DURI research series.</span></p></div>
+    <div><h4><span data-ar>تواصل</span><span data-en>Contact</span></h4><a href="mailto:info@mazeed.com.ly">info@mazeed.com.ly</a></div>
+    <div><h4><span data-ar>دُوري</span><span data-en>DURI</span></h4><a href="#" data-link="survey" target="_blank" rel="noopener"><span data-ar>استبيان دُوري 4</span><span data-en>DURI 4 survey</span></a><br><a href="#" data-link="results" target="_blank" rel="noopener"><span data-ar>نتائج السلسلة</span><span data-en>Series findings</span></a></div>
+    <div class="fe"><span>© <span id="yr">2026</span> Mazeed</span><span>mazeed.com.ly</span></div>
+  </div>
+</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+/* ═══ LINKS: change these two lines when duri.mazeed.com.ly is live ═══ */
+var LINKS={
+  survey:'https://kasimmahjoub.github.io/duri4/',
+  results:'https://kasimmahjoub.github.io/duri4/results/',
+  page:'https://mazeed.com.ly/#duri'
+};
+
+var html=document.documentElement,lang='ar';
+var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+setTimeout(function(){document.getElementById('pre').classList.add('gone')},RM?60:900);
+
+/* links */
+document.querySelectorAll('[data-link]').forEach(function(a){a.href=LINKS[a.dataset.link]});
+document.querySelectorAll('[data-url]').forEach(function(s){s.textContent=LINKS[s.dataset.url].replace(/^https?:\/\//,'').replace(/\/$/,'')});
+
+/* copy */
+var toast=document.getElementById('toast'),tt;
+function say(t){toast.textContent=t;toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},1600)}
+function copy(text){
+  if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(text);
+  return new Promise(function(res,rej){var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy')?res():rej()}catch(e){rej(e)}ta.remove()});
+}
+document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){
+  copy(LINKS[b.dataset.copy]).then(function(){
+    if(b.classList.contains('cp')){b.classList.add('ok');setTimeout(function(){b.classList.remove('ok')},1600)}
+    say(lang==='ar'?'تم نسخ الرابط':'Link copied');
+  }).catch(function(){say(LINKS[b.dataset.copy])});
+})});
+
+/* animated topographic field (slow drift, throttled, pauses when hidden) */
+var cv=document.getElementById('topo'),cx=cv.getContext('2d');
+function rnd(s){return function(){s|=0;s=s+0x6D2B79F5|0;var t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+var R=rnd(7),peaks=[];for(var i=0;i<6;i++)peaks.push({x:R(),y:R(),r:.06+R()*.16,a:.6+R()*1.1,px:R()*6.28,py:R()*6.28,sp:.04+R()*.06});
+var mxp=0,myp=0;
+function f(x,y,t){var v=0;for(var i=0;i<peaks.length;i++){var p=peaks[i],cx0=p.x+Math.sin(t*p.sp+p.px)*.05+mxp*.02,cy0=p.y+Math.cos(t*p.sp+p.py)*.05+myp*.02,dx=x-cx0,dy=(y-cy0)*.85;v+=p.a/(1+(dx*dx+dy*dy)/(p.r*p.r))}return v}
+function ip(p,q,a,b,l){return p+(q-p)*((l-a)/(b-a||1e-6))}
+var W,H,cell=22;
+function size(){var d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0);cell=W<700?26:22}
+function draw(t){
+  var col=getComputedStyle(html).getPropertyValue('--ctr').trim();
+  var cols=Math.ceil(W/cell)+1,rows=Math.ceil(H/cell)+1,g=[],mn=1e9,mx=-1e9,i,j;
+  for(j=0;j<rows;j++){g[j]=[];for(i=0;i<cols;i++){var v=f(i*cell/W,j*cell/H,t);g[j][i]=v;if(v<mn)mn=v;if(v>mx)mx=v}}
+  cx.clearRect(0,0,W,H);var L=14;
+  function seg(p,q){cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y)}
+  for(var k=1;k<L;k++){
+    var lv=mn+(mx-mn)*(k/L),major=k%4===0;cx.beginPath();
+    for(j=0;j<rows-1;j++)for(i=0;i<cols-1;i++){
+      var a=g[j][i],b=g[j][i+1],e=g[j+1][i+1],h=g[j+1][i];
+      var s=(a>lv?8:0)|(b>lv?4:0)|(e>lv?2:0)|(h>lv?1:0);if(s===0||s===15)continue;
+      var x0=i*cell,y0=j*cell,x1=x0+cell,y1=y0+cell;
+      var T={x:ip(x0,x1,a,b,lv),y:y0},Rt={x:x1,y:ip(y0,y1,b,e,lv)},B={x:ip(x0,x1,h,e,lv),y:y1},Lf={x:x0,y:ip(y0,y1,a,h,lv)};
+      switch(s){case 1:case 14:seg(Lf,B);break;case 2:case 13:seg(B,Rt);break;case 3:case 12:seg(Lf,Rt);break;case 4:case 11:seg(T,Rt);break;case 6:case 9:seg(T,B);break;case 7:case 8:seg(Lf,T);break;case 5:seg(Lf,T);seg(B,Rt);break;case 10:seg(T,Rt);seg(Lf,B);break}
+    }
+    cx.strokeStyle='rgba('+col+','+(major?.20:.08)+')';cx.lineWidth=major?1.1:.7;cx.stroke();
+  }
+}
+size();draw(0);
+var last=0,t0=performance.now();
+function loop(now){ if(!document.hidden&&now-last>66){last=now;draw((now-t0)/1000)} requestAnimationFrame(loop)}
+if(!RM)requestAnimationFrame(loop);
+var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){size();draw((performance.now()-t0)/1000)},120)});
+addEventListener('pointermove',function(e){mxp=e.clientX/innerWidth-.5;myp=e.clientY/innerHeight-.5},{passive:true});
+
+/* spotlight on glass cards */
+document.addEventListener('pointermove',function(e){var c=e.target.closest&&e.target.closest('.spot');if(!c)return;var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')},{passive:true});
+
+/* theme */
+var saved=null;try{saved=localStorage.getItem('mz-theme')}catch(e){}
+html.setAttribute('data-theme',saved||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+document.getElementById('th').addEventListener('click',function(){var t=html.getAttribute('data-theme')==='light'?'dark':'light';html.setAttribute('data-theme',t);try{localStorage.setItem('mz-theme',t)}catch(e){}if(RM)draw(0)});
+
+/* language */
+function setLang(l){lang=l;html.setAttribute('data-lang',l);html.setAttribute('lang',l);html.setAttribute('dir',l==='ar'?'rtl':'ltr');document.getElementById('lg').textContent=l==='ar'?'EN':'ع';try{localStorage.setItem('mz-lang',l)}catch(e){}movePill()}
+document.getElementById('lg').addEventListener('click',function(){setLang(lang==='ar'?'en':'ar')});
+
+/* header + progress */
+var hd=document.getElementById('hd'),pg=document.getElementById('prog');
+addEventListener('scroll',function(){hd.classList.toggle('stuck',scrollY>30);var m=document.documentElement.scrollHeight-innerHeight;pg.style.width=(m>0?scrollY/m*100:0)+'%'},{passive:true});
+
+/* tabs */
+var tabs=document.getElementById('tabs'),pill=document.getElementById('pill');
+var T={mazeed:document.getElementById('t-mazeed'),duri:document.getElementById('t-duri')};
+var P={mazeed:document.getElementById('p-mazeed'),duri:document.getElementById('p-duri')};
+function movePill(){var a=tabs.querySelector('[aria-selected="true"]');if(!a)return;pill.style.width=a.offsetWidth+'px';pill.style.insetInlineStart=(lang==='ar'?(tabs.clientWidth-a.offsetLeft-a.offsetWidth):a.offsetLeft)+'px'}
+function show(n,push){
+  if(!P[n])n='mazeed';
+  Object.keys(P).forEach(function(k){var on=k===n;P[k].hidden=!on;T[k].setAttribute('aria-selected',on);T[k].tabIndex=on?0:-1});
+  if(push&&location.hash!=='#'+n)history.pushState(null,'','#'+n);
+  scrollTo(0,0);movePill();
+  requestAnimationFrame(function(){P[n].querySelectorAll('.rv').forEach(function(e){io.observe(e)})});
+}
+T.mazeed.addEventListener('click',function(){show('mazeed',true)});
+T.duri.addEventListener('click',function(){show('duri',true)});
+tabs.addEventListener('keydown',function(e){if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;var n=T.mazeed.getAttribute('aria-selected')==='true'?'duri':'mazeed';show(n,true);T[n].focus()});
+document.querySelectorAll('[data-go]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();show(a.dataset.go,true)})});
+addEventListener('hashchange',function(){var h=location.hash.slice(1);if(P[h])show(h,false)});
+
+/* elevation explorer */
+function pick(b){document.querySelectorAll('.band').forEach(function(x){x.classList.remove('on')});document.querySelectorAll('.epane').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById(b.dataset.b).classList.add('on')}
+document.querySelectorAll('.band').forEach(function(b){b.addEventListener('click',function(){pick(b)});b.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(b)}})});
+
+/* summary drawer */
+var dlg=document.getElementById('sum');
+document.querySelectorAll('[data-open="sum"]').forEach(function(b){b.addEventListener('click',function(){if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','')})});
+dlg.querySelector('[data-close]').addEventListener('click',function(){dlg.close()});
+dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+
+/* counters */
+function count(el){var to=parseFloat(el.dataset.count),dec=+el.dataset.dec||0,suf=el.querySelector('small');var s=performance.now(),d=RM?0:1400;
+  (function step(n){var p=d?Math.min(1,(n-s)/d):1,e=1-Math.pow(1-p,3),v=(to*e).toFixed(dec);el.firstChild.nodeValue=v;if(p<1)requestAnimationFrame(step)})(s);}
+
+/* reveal */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-count]').forEach(function(c){if(!c.dataset.done){c.dataset.done=1;count(c)}});io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+addEventListener('resize',movePill);
+var sl=null;try{sl=localStorage.getItem('mz-lang')}catch(e){}
+setLang(sl==='en'?'en':'ar');
+var h=location.hash.slice(1);show(P[h]?h:'mazeed',false);
+if(document.fonts)document.fonts.ready.then(movePill);
+})();
+</script>
+</body>
+</html>
