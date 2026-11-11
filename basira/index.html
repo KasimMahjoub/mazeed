@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mazeed Basira</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="مزيد بصيرة: استطلاعات الرأي والمسوح الوطنية والرصد الإعلامي. نافذتك على المجتمع الليبي.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+
+/* Layout: a deck of soft white "slides" floating on a lavender-white ground; each slide pairs a short text with a calm purple illustration (mountains, rising blocks, a round window, an arc, a phone). Pink is a small marker only. */
+:root{
+  --bg:#F5F5FC; --bg-hi:#FBFAFF; --card:#FFFFFF; --ink:#16145E; --muted:#5D5E86; --line:#E3E1F4; --soft:#EEEBFB;
+  --p1:#1B1A86; --p2:#4B4FD2; --p3:#9EA3F2; --p4:#D2C8F4; --pink:#F4BFCF; --pink-ink:#C94F75;
+  --logo:#10069F; --dot2:#2264DC; --dot3:#00B4D2;
+  --shadow:0 30px 70px -36px rgba(40,36,140,.35),0 2px 8px rgba(40,36,140,.05);
+  --f-h:"Readex Pro","IBM Plex Sans Arabic",system-ui,sans-serif;
+  --f-b-ar:"IBM Plex Sans Arabic","Segoe UI",Tahoma,system-ui,sans-serif;
+  --f-b-en:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --max:1200px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0C0B26; --bg-hi:#121034; --card:#17153F; --ink:#EEEDFF; --muted:#ABAAD2; --line:#2A2860; --soft:#1F1D4E;
+  --p1:#C9C6FF; --p2:#8E91FF; --p3:#5D60D8; --p4:#3A3790; --pink:#E58CA8; --pink-ink:#F3A6BD;
+  --logo:#FFFFFF; --shadow:0 30px 70px -36px rgba(0,0,0,.7),0 2px 8px rgba(0,0,0,.3); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C0B26; --bg-hi:#121034; --card:#17153F; --ink:#EEEDFF; --muted:#ABAAD2; --line:#2A2860; --soft:#1F1D4E;
+  --p1:#C9C6FF; --p2:#8E91FF; --p3:#5D60D8; --p4:#3A3790; --pink:#E58CA8; --pink-ink:#F3A6BD;
+  --logo:#FFFFFF; --shadow:0 30px 70px -36px rgba(0,0,0,.7),0 2px 8px rgba(0,0,0,.3); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);background-image:radial-gradient(800px 500px at 90% -5%,var(--soft),transparent 70%),radial-gradient(700px 500px at 0% 40%,var(--bg-hi),transparent 70%);color:var(--ink);font-family:var(--f-b-ar);font-size:17px;line-height:1.85;-webkit-font-smoothing:antialiased}
+html[lang="en"] body{font-family:var(--f-b-en);line-height:1.65}
+html[lang="ar"] [lang="en"]:not(html), html[lang="en"] [lang="ar"]:not(html){display:none!important}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{font-family:var(--f-h);font-weight:500;line-height:1.35;margin:0;text-wrap:balance;color:var(--ink)}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3{letter-spacing:-.02em;line-height:1.15}
+.wrap{max-width:var(--max);margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.logo-svg{display:block;height:100%;width:auto;color:var(--logo)}
+:focus-visible{outline:2px solid var(--p2);outline-offset:3px;border-radius:8px}
+.arrow{display:inline-block}
+html[dir="rtl"] .arrow{transform:scaleX(-1)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:inherit;font-weight:600;font-size:.97rem;padding:.8em 1.45em;border-radius:999px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:linear-gradient(135deg,#4B4FD2,#1B1A86);color:#fff;box-shadow:0 16px 30px -16px #4B4FD2}
+.btn-l{background:var(--card);border-color:var(--line);color:var(--ink)}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--p2);font-family:var(--f-h);font-size:.92rem;font-weight:500}
+.kicker::before{content:"";width:0;height:0;border-inline-start:9px solid var(--pink);border-block:6px solid transparent}
+
+/* Header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.hdr{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:20;margin-top:12px}
+.bar{display:flex;align-items:center;gap:20px;height:64px;padding-inline:22px;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(14px);border-radius:20px;box-shadow:var(--shadow)}
+.lock{display:flex;align-items:center;gap:14px;height:30px;text-decoration:none}
+.lock .lg{height:27px}
+.lock .vr{width:1px;align-self:stretch;background:var(--p3)}
+.lock .nm{font-family:var(--f-h);font-weight:300;font-size:1.6rem;line-height:1;color:var(--p2)}
+html[lang="en"] .lock .nm{font-size:1.32rem}
+nav.main{display:flex;gap:22px;margin-inline-start:auto;font-size:.92rem}
+nav.main a{text-decoration:none;color:var(--muted);font-weight:500}
+nav.main a:hover{color:var(--ink)}
+.tools{display:flex;gap:8px}
+.tbtn{height:38px;min-width:38px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 .82rem/1 var(--f-b-en);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+html[lang="ar"] .tbtn.home{font-family:var(--f-b-ar)}
+.tbtn svg{width:17px;height:17px}
+@media (max-width:980px){nav.main{display:none}.tools{margin-inline-start:auto}}
+@media (max-width:460px){.bar{padding-inline:14px;gap:10px}.lock{gap:10px}.lock .lg{height:22px}.lock .nm{font-size:1.3rem}.tbtn.home{display:none}}
+
+/* Slides */
+.slide{position:relative;background:var(--card);border-radius:30px;box-shadow:var(--shadow);padding:48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;overflow:hidden}
+.slide + .slide{margin-top:28px}
+.slide h2{font-size:clamp(1.8rem,3.2vw,2.6rem);margin-top:14px}
+.slide .lead{color:var(--muted);margin-top:16px;max-width:52ch}
+section{padding-top:28px}
+@media (max-width:900px){.slide{grid-template-columns:1fr;padding:28px 22px;gap:28px;border-radius:24px}}
+
+/* Hero */
+.hero{padding-top:28px}
+.hero .slide{padding:56px 52px;background:linear-gradient(160deg,var(--card) 55%,var(--soft))}
+.hero h1{font-size:clamp(2.4rem,5.2vw,4.1rem);font-weight:500;margin-top:16px}
+.hero h1 b{font-weight:600;background:linear-gradient(90deg,#4B4FD2,#9EA3F2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.ill{width:100%;height:auto;display:block;max-width:100%}
+.caps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:20px}
+.cap{display:flex;align-items:center;gap:12px;background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:16px 18px;font-weight:500;font-size:.94rem;line-height:1.45;min-width:0}
+.cap i{width:36px;height:36px;border-radius:12px;flex:none;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2))}
+.cap i svg{width:18px;height:18px}
+@media (max-width:900px){.hero .slide{padding:30px 22px}.caps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Indicators */
+.ind{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:26px}
+.ind div{display:grid;grid-template-columns:12px 1fr;gap:12px;padding:14px 16px;border-radius:16px;background:var(--bg-hi);border:1px solid var(--line);min-width:0}
+.ind i{width:12px;height:12px;border-radius:4px;margin-top:.55em;background:var(--c)}
+.ind b{display:block;font-family:var(--f-h);font-weight:500;line-height:1.4}
+.ind span span{color:var(--muted);font-size:.88rem;line-height:1.55}
+@media (max-width:560px){.ind{grid-template-columns:1fr}}
+
+/* Window points */
+.pts{display:grid;gap:14px;margin-top:24px}
+.pts div{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.pts .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--soft);color:var(--p2)}
+.pts .ic svg{width:20px;height:20px}
+.pts b{display:block;font-family:var(--f-h);font-weight:500}
+.pts span span{color:var(--muted);font-size:.93rem;line-height:1.65}
+
+/* Services */
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:6px}
+.sv{background:var(--card);border-radius:24px;box-shadow:var(--shadow);padding:26px 22px;display:grid;gap:10px;align-content:start;min-width:0}
+.sv .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2));margin-bottom:6px}
+.sv .ic svg{width:24px;height:24px}
+.sv h3{font-size:1.15rem}
+.sv p{color:var(--muted);font-size:.93rem;line-height:1.7}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin:72px 0 26px}
+.sec-head h2{font-size:clamp(1.8rem,3.2vw,2.6rem);margin-top:12px}
+.sec-head p{color:var(--muted)}
+@media (max-width:980px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.svc{grid-template-columns:1fr}}
+@media (max-width:860px){.sec-head{grid-template-columns:1fr;gap:12px;margin-top:56px}}
+
+/* Outputs */
+.outs{display:grid;gap:12px;margin-top:24px}
+.outs div{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:16px;background:var(--bg-hi);border:1px solid var(--line)}
+.outs i{width:10px;height:10px;border-radius:50%;flex:none;background:var(--c)}
+.outs b{font-weight:500}
+
+/* Releases */
+.rel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.rc{border-radius:24px;padding:28px 24px;display:grid;gap:10px;align-content:start;min-width:0;box-shadow:var(--shadow)}
+.rc.a{background:linear-gradient(150deg,#4B4FD2,#1B1A86);color:#fff}
+.rc.b{background:linear-gradient(150deg,#9EA3F2,#4B4FD2);color:#fff}
+.rc.c{background:var(--card);border:1.5px dashed var(--p3);box-shadow:none}
+.rc .t{font-size:.84rem;opacity:.85;font-weight:500}
+.rc h3{font-size:1.4rem;color:inherit}
+.rc p{opacity:.88;font-size:.94rem;line-height:1.7}
+.rc.c .t{color:var(--pink-ink);opacity:1}
+.rc.c p{color:var(--muted);opacity:1}
+.soon{display:flex;gap:8px;margin-top:6px}
+.soon span{height:34px;flex:1;border-radius:10px;background:linear-gradient(90deg,var(--soft),var(--bg-hi),var(--soft));background-size:200% 100%;animation:sh 2.4s ease-in-out infinite}
+@keyframes sh{from{background-position:100% 0}to{background-position:-100% 0}}
+@media (max-width:900px){.rel{grid-template-columns:1fr}}
+
+/* Audience */
+.aud{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.aud div{background:var(--card);border-radius:20px;box-shadow:var(--shadow);padding:22px;min-width:0}
+.aud b{display:block;font-family:var(--f-h);font-weight:500;margin-bottom:6px}
+.aud span span{color:var(--muted);font-size:.9rem;line-height:1.6}
+@media (max-width:980px){.aud{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.aud{grid-template-columns:1fr}}
+
+.trust{margin-top:28px;display:flex;align-items:center;gap:14px;justify-content:center;text-align:center;color:var(--muted);font-size:.95rem}
+.trust svg{width:20px;height:20px;color:var(--p2);flex:none}
+
+.final{margin-top:72px;background:linear-gradient(140deg,#1B1A86,#4B4FD2 60%,#9EA3F2);border-radius:30px;color:#fff;padding:52px 48px;display:grid;grid-template-columns:minmax(0,1.3fr) auto;gap:28px;align-items:center;position:relative;overflow:hidden}
+.final h2{color:#fff;font-size:clamp(1.8rem,3.4vw,2.6rem)}
+.final p{opacity:.88;margin-top:12px;max-width:54ch}
+.final .actions{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.final .btn-w{background:#fff;color:#1B1A86}
+.final .btn-o{border-color:rgba(255,255,255,.55);color:#fff}
+.final .deco{position:absolute;inset-inline-end:-60px;bottom:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.35),rgba(255,255,255,0) 60%);border:1px solid rgba(255,255,255,.25)}
+@media (max-width:860px){.final{grid-template-columns:1fr;padding:32px 22px}}
+
+footer.site{margin-top:56px;border-top:1px solid var(--line);padding-block:30px 40px;font-size:.86rem;color:var(--muted)}
+.foot{display:flex;flex-wrap:wrap;gap:14px 36px;justify-content:space-between;align-items:center}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--ink)}
+
+.float{animation:fl 8s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion:reduce){.float,.soon span{animation:none}html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap hdr">
+  <div class="bar">
+    <a class="lock" href="#top" aria-label="Mazeed Basira"><span class="lg"><svg class="logo-svg" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 676.171 169.32">
+<defs>
+<filter id="ar1-filter-remove-color" x="0%" y="0%" width="100%" height="100%">
+<feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" />
+</filter>
+<clipPath id="ar1-clip-0">
+<path clip-rule="nonzero" d="M 308 43 L 387 43 L 387 168.644531 L 308 168.644531 Z M 308 43 "/>
+</clipPath>
+<clipPath id="ar1-clip-1">
+<path clip-rule="nonzero" d="M 553 32 L 674.40625 32 L 674.40625 125 L 553 125 Z M 553 32 "/>
+</clipPath>
+<mask id="ar1-mask-0">
+<g filter="url(#ar1-filter-remove-color)">
+<rect x="-67.6171" y="-16.932" width="811.4052" height="203.184" fill="rgb(0%, 0%, 0%)" fill-opacity="0.600006"/>
+</g>
+</mask>
+<clipPath id="ar1-clip-2">
+<path clip-rule="nonzero" d="M 0 0.832031 L 42.121094 0.832031 L 42.121094 42.953125 L 0 42.953125 Z M 0 0.832031 "/>
+</clipPath>
+<clipPath id="ar1-clip-3">
+<rect x="0" y="0" width="43" height="43"/>
+</clipPath>
+<g id="ar1-source-5" clip-path="url(#ar1-clip-3)">
+<g clip-path="url(#ar1-clip-2)">
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 42.121094 21.890625 C 42.121094 10.363281 32.589844 0.832031 21.058594 0.832031 C 9.53125 0.832031 0 10.363281 0 21.890625 C 0 33.421875 9.53125 42.953125 21.058594 42.953125 C 32.589844 42.953125 42.121094 33.421875 42.121094 21.890625 "/>
+</g>
+</g>
+<clipPath id="ar1-clip-4">
+<path clip-rule="nonzero" d="M 0.941406 82 L 44 82 L 44 125 L 0.941406 125 Z M 0.941406 82 "/>
+</clipPath>
+</defs>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 220.121094 99.898438 L 220.121094 124.957031 L 117.34375 124.957031 L 117.34375 99.898438 L 177.453125 99.898438 L 177.453125 90.25 C 177.453125 82.007812 176.152344 75.546875 173.558594 70.859375 C 170.960938 66.175781 166.894531 62.789062 161.367188 60.703125 C 155.835938 58.613281 148.4375 57.566406 139.183594 57.566406 L 126.824219 57.566406 L 126.824219 32 L 139.523438 32 C 159.277344 32 174.796875 36.96875 186.085938 46.902344 C 197.371094 56.835938 203.019531 71.285156 203.019531 90.25 L 203.019531 99.898438 Z M 220.121094 99.898438 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 210.382812 103.453125 C 212.921875 101.082031 216.167969 99.898438 220.121094 99.898438 L 253.984375 99.898438 L 253.984375 124.957031 L 220.121094 124.957031 C 216.167969 124.957031 212.921875 123.773438 210.382812 121.402344 C 207.84375 119.03125 206.574219 116.042969 206.574219 112.429688 C 206.574219 108.816406 207.84375 105.824219 210.382812 103.453125 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 244.246094 103.453125 C 246.789062 101.082031 250.035156 99.898438 253.984375 99.898438 L 287.847656 99.898438 L 287.847656 124.957031 L 253.984375 124.957031 C 250.035156 124.957031 246.789062 123.773438 244.246094 121.402344 C 241.707031 119.03125 240.4375 116.042969 240.4375 112.429688 C 240.4375 108.816406 241.707031 105.824219 244.246094 103.453125 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 278.113281 103.453125 C 280.652344 101.082031 283.898438 99.898438 287.847656 99.898438 L 321.710938 99.898438 L 321.710938 124.957031 L 287.847656 124.957031 C 283.898438 124.957031 280.652344 123.773438 278.113281 121.402344 C 275.570312 119.03125 274.300781 116.042969 274.300781 112.429688 C 274.300781 108.816406 275.570312 105.824219 278.113281 103.453125 "/>
+<g clip-path="url(#ar1-clip-0)">
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 362.011719 164.410156 C 359.1875 161.585938 357.777344 158.199219 357.777344 154.25 C 357.777344 150.296875 359.1875 146.910156 362.011719 144.089844 C 364.832031 141.269531 368.214844 139.859375 372.167969 139.859375 C 376.121094 139.859375 379.503906 141.269531 382.328125 144.089844 C 385.148438 146.910156 386.5625 150.296875 386.5625 154.25 C 386.5625 158.199219 385.148438 161.585938 382.328125 164.410156 C 379.503906 167.230469 376.121094 168.644531 372.167969 168.644531 C 368.214844 168.644531 364.832031 167.230469 362.011719 164.410156 M 328.316406 164.410156 C 325.492188 161.585938 324.082031 158.199219 324.082031 154.25 C 324.082031 150.296875 325.492188 146.910156 328.316406 144.089844 C 331.136719 141.269531 334.519531 139.859375 338.472656 139.859375 C 342.425781 139.859375 345.8125 141.269531 348.632812 144.089844 C 351.453125 146.910156 352.867188 150.296875 352.867188 154.25 C 352.867188 158.199219 351.453125 161.585938 348.632812 164.410156 C 345.8125 167.230469 342.425781 168.644531 338.472656 168.644531 C 334.519531 168.644531 331.136719 167.230469 328.316406 164.410156 M 342.875 43.683594 L 368.445312 43.683594 L 368.445312 124.957031 L 321.710938 124.957031 C 317.875 124.957031 314.65625 123.71875 312.058594 121.230469 C 309.464844 118.75 308.167969 115.703125 308.167969 112.089844 C 308.167969 108.476562 309.410156 105.542969 311.890625 103.285156 C 314.375 101.027344 317.648438 99.898438 321.710938 99.898438 L 342.875 99.898438 Z M 342.875 43.683594 "/>
+</g>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 424.320312 24.550781 C 421.496094 21.730469 420.085938 18.34375 420.085938 14.390625 C 420.085938 10.441406 421.496094 7.054688 424.320312 4.234375 C 427.140625 1.414062 430.527344 0 434.480469 0 C 438.429688 0 441.816406 1.414062 444.636719 4.234375 C 447.457031 7.054688 448.871094 10.441406 448.871094 14.390625 C 448.871094 18.34375 447.457031 21.730469 444.636719 24.550781 C 441.816406 27.375 438.429688 28.785156 434.480469 28.785156 C 430.527344 28.785156 427.140625 27.375 424.320312 24.550781 M 465.296875 99.898438 L 465.296875 124.957031 L 447.6875 124.957031 C 447.6875 137.035156 444.976562 146.179688 439.558594 152.386719 C 434.140625 158.59375 426.40625 161.699219 416.363281 161.699219 C 409.699219 161.699219 402.589844 160.457031 395.027344 157.976562 L 399.9375 135.964844 C 405.128906 137.203125 409.191406 137.824219 412.128906 137.824219 C 415.625 137.824219 418.164062 136.867188 419.75 134.949219 C 421.328125 133.027344 422.117188 129.699219 422.117188 124.957031 L 422.117188 43.683594 L 447.6875 43.683594 L 447.6875 99.898438 Z M 465.296875 99.898438 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 455.558594 103.453125 C 458.097656 101.082031 461.34375 99.898438 465.296875 99.898438 L 499.160156 99.898438 L 499.160156 124.957031 L 465.296875 124.957031 C 461.34375 124.957031 458.097656 123.773438 455.558594 121.402344 C 453.019531 119.03125 451.75 116.042969 451.75 112.429688 C 451.75 108.816406 453.019531 105.824219 455.558594 103.453125 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 489.421875 103.453125 C 491.964844 101.082031 495.210938 99.898438 499.160156 99.898438 L 533.023438 99.898438 L 533.023438 124.957031 L 499.160156 124.957031 C 495.210938 124.957031 491.964844 123.773438 489.421875 121.402344 C 486.882812 119.03125 485.613281 116.042969 485.613281 112.429688 C 485.613281 108.816406 486.882812 105.824219 489.421875 103.453125 "/>
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 523.289062 103.453125 C 525.828125 101.082031 529.074219 99.898438 533.023438 99.898438 L 566.886719 99.898438 L 566.886719 124.957031 L 533.023438 124.957031 C 529.074219 124.957031 525.828125 123.773438 523.289062 121.402344 C 520.746094 119.03125 519.476562 116.042969 519.476562 112.429688 C 519.476562 108.816406 520.746094 105.824219 523.289062 103.453125 "/>
+<g clip-path="url(#ar1-clip-1)">
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 642.742188 96.089844 C 646.804688 92.421875 648.839844 87.199219 648.839844 80.425781 C 648.839844 73.882812 646.976562 68.433594 643.25 64.085938 C 639.527344 59.742188 634.617188 57.566406 628.519531 57.566406 C 623.890625 57.566406 620.136719 59.121094 617.261719 62.222656 C 614.382812 65.332031 611.8125 70.265625 609.554688 77.039062 C 608.425781 80.316406 607.578125 83.757812 607.015625 87.367188 C 606.789062 88.160156 606.59375 89.089844 606.421875 90.164062 C 606.253906 91.238281 605.941406 92.449219 605.492188 93.800781 C 608.765625 96.398438 612.320312 98.347656 616.160156 99.644531 C 619.996094 100.945312 623.71875 101.589844 627.335938 101.589844 C 633.542969 101.589844 638.679688 99.757812 642.742188 96.089844 M 651.96875 38.433594 C 658.914062 42.726562 664.386719 48.566406 668.394531 55.960938 C 672.398438 63.355469 674.40625 71.511719 674.40625 80.425781 C 674.40625 89.683594 672.429688 97.671875 668.480469 104.386719 C 664.527344 111.101562 659.277344 116.210938 652.734375 119.710938 C 646.183594 123.207031 639.019531 124.957031 631.230469 124.957031 C 625.132812 124.957031 619.121094 123.886719 613.195312 121.742188 C 607.269531 119.597656 601.765625 116.382812 596.6875 112.089844 C 593.300781 116.265625 589.039062 119.453125 583.902344 121.65625 C 578.765625 123.855469 573.09375 124.957031 566.886719 124.957031 C 563.050781 124.957031 559.832031 123.714844 557.234375 121.234375 C 554.640625 118.75 553.339844 115.703125 553.339844 112.089844 C 553.339844 108.476562 554.585938 105.542969 557.066406 103.285156 C 559.550781 101.027344 562.824219 99.898438 566.886719 99.898438 C 570.5 99.898438 573.261719 99.25 575.183594 97.949219 C 577.101562 96.652344 578.484375 94.878906 579.332031 92.617188 C 580.179688 90.363281 581.164062 86.859375 582.296875 82.121094 C 583.421875 77.269531 584.214844 74.105469 584.664062 72.636719 C 588.164062 59.769531 593.667969 49.78125 601.175781 42.667969 C 608.679688 35.558594 617.792969 32 628.519531 32 C 637.210938 32 645.027344 34.148438 651.96875 38.433594 "/>
+</g>
+<g mask="url(#ar1-mask-0)">
+<use xlink:href="#ar1-source-5" transform="matrix(1, 0, 0, 1, 27, 82)"/>
+</g>
+<path fill-rule="nonzero" fill="var(--dot3,#00B4D2)" fill-opacity="1" d="M 69.121094 103.894531 C 69.121094 97.265625 65.957031 91.277344 61.078125 87.410156 C 64.6875 84.546875 69.222656 82.835938 74.121094 82.835938 C 85.648438 82.835938 95.179688 92.367188 95.179688 103.894531 C 95.179688 115.425781 85.648438 124.957031 74.121094 124.957031 C 69.222656 124.957031 64.6875 123.246094 61.078125 120.382812 C 65.957031 116.511719 69.121094 110.527344 69.121094 103.894531 "/>
+<path fill-rule="nonzero" fill="var(--dot2,#2264DC)" fill-opacity="1" d="M 35.019531 120.382812 C 38.628906 123.246094 43.164062 124.957031 48.0625 124.957031 C 52.957031 124.957031 57.472656 123.246094 61.078125 120.382812 C 65.957031 116.511719 69.121094 110.527344 69.121094 103.894531 C 69.121094 97.265625 65.957031 91.277344 61.078125 87.410156 C 57.472656 84.546875 52.957031 82.835938 48.0625 82.835938 C 43.164062 82.835938 38.628906 84.546875 35.019531 87.410156 C 39.898438 91.277344 43.0625 97.265625 43.0625 103.894531 C 43.0625 110.527344 39.898438 116.511719 35.019531 120.382812 "/>
+<g clip-path="url(#ar1-clip-4)">
+<path fill-rule="nonzero" fill="currentColor" fill-opacity="1" d="M 0.941406 103.894531 C 0.941406 115.425781 10.472656 124.957031 22 124.957031 C 26.898438 124.957031 31.414062 123.246094 35.019531 120.382812 C 39.898438 116.511719 43.0625 110.527344 43.0625 103.894531 C 43.0625 97.265625 39.898438 91.277344 35.019531 87.410156 C 31.414062 84.546875 26.898438 82.835938 22 82.835938 C 10.472656 82.835938 0.941406 92.367188 0.941406 103.894531 "/>
+</g>
+</svg></span><span class="vr"></span><span class="nm"><span lang="ar">بصيرة</span><span lang="en">Basira</span></span></a>
+    <nav class="main">
+      <a href="#measure"><span lang="ar">ماذا نقيس</span><span lang="en">What we measure</span></a>
+      <a href="#why"><span lang="ar">لماذا بصيرة</span><span lang="en">Why Basira</span></a>
+      <a href="#services"><span lang="ar">الخدمات</span><span lang="en">Services</span></a>
+      <a href="#releases"><span lang="ar">الإصدارات</span><span lang="en">Releases</span></a>
+    </nav>
+    <div class="tools">
+      <a class="tbtn home" data-link="home" href="../"><span lang="ar">مزيد</span><span lang="en">Mazeed</span></a>
+      <button class="tbtn" data-act="lang" type="button" aria-label="Switch language"><span lang="ar">EN</span><span lang="en">ع</span></button>
+      <button class="tbtn" data-act="theme" type="button" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></button>
+    </div>
+  </div>
+</div>
+
+<main id="top" class="wrap">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="slide">
+    <div>
+      <span class="kicker"><span lang="ar">مزيد بصيرة</span><span lang="en">Mazeed Basira</span></span>
+      <h1><span lang="ar">نافذتك على<br><b>المجتمع الليبي.</b></span><span lang="en">Your window on<br><b>Libyan society.</b></span></h1>
+      <p class="lead"><span lang="ar">بصيرة ذراع مزيد المتخصصة في استطلاعات الرأي والمسوح الوطنية ورصد الإعلام. نستمع إلى الناس في مدنهم وأحيائهم، ونتابع ما يتداولونه في الإعلام والمنصات الرقمية، ثم نضع بين يديك الصورة كاملة في مؤشرات واضحة.</span><span lang="en">Basira is Mazeed's arm for opinion polls, national surveys and media monitoring. We listen to people in their cities and neighbourhoods, follow what they share across media and digital platforms, and hand you the full picture in clear indicators.</span></p>
+      <div class="cta">
+        <a class="btn btn-p" href="#contact"><span lang="ar">اطلب عرضًا</span><span lang="en">Request a proposal</span> <span class="arrow">→</span></a>
+        <a class="btn btn-l" href="#measure"><span lang="ar">ماذا يمكن أن نقيس لك</span><span lang="en">What we can measure</span></a>
+      </div>
+    </div>
+    <svg class="ill float" viewBox="0 0 560 420" role="img" aria-label="Illustration: rising data blocks over mountains">
+      <defs>
+        <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D2C8F4"/><stop offset="1" stop-color="#F3F0FF"/></linearGradient>
+        <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9EA3F2"/><stop offset="1" stop-color="#E6E3FB"/></linearGradient>
+        <linearGradient id="bf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7C80EA"/><stop offset="1" stop-color="#4B4FD2"/></linearGradient>
+        <linearGradient id="bs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4B4FD2"/><stop offset="1" stop-color="#1B1A86"/></linearGradient>
+        <linearGradient id="bf2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9C5F7"/><stop offset="1" stop-color="#9EA3F2"/></linearGradient>
+        <linearGradient id="bs2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9EA3F2"/><stop offset="1" stop-color="#6E72DE"/></linearGradient>
+      </defs>
+      <circle cx="430" cy="90" r="40" fill="#F4BFCF" opacity=".55"/>
+      <path d="M0 330 L90 220 L150 270 L240 150 L330 260 L400 200 L560 330 Z" fill="url(#m1)"/>
+      <path d="M40 360 L150 260 L220 310 L300 230 L380 300 L460 250 L560 360 Z" fill="url(#m2)" opacity=".85"/>
+      <ellipse cx="290" cy="372" rx="230" ry="26" fill="#4B4FD2" opacity=".08"/>
+      <!-- blocks: front face, side face, top -->
+      <g>
+        <path d="M150 360 L150 270 L190 250 L190 340 Z" fill="url(#bs2)"/><path d="M110 340 L110 250 L150 270 L150 360 Z" fill="url(#bf2)"/><path d="M110 250 L150 230 L190 250 L150 270 Z" fill="#E6E3FB"/>
+      </g>
+      <g>
+        <path d="M240 372 L240 210 L280 190 L280 352 Z" fill="url(#bs)"/><path d="M200 352 L200 190 L240 210 L240 372 Z" fill="url(#bf)"/><path d="M200 190 L240 170 L280 190 L240 210 Z" fill="#B9B7F5"/>
+      </g>
+      <g>
+        <path d="M330 362 L330 150 L370 130 L370 342 Z" fill="url(#bs)"/><path d="M290 342 L290 130 L330 150 L330 362 Z" fill="url(#bf)"/><path d="M290 130 L330 110 L370 130 L330 150 Z" fill="#B9B7F5"/>
+      </g>
+      <g>
+        <path d="M420 350 L420 240 L460 220 L460 330 Z" fill="url(#bs2)"/><path d="M380 330 L380 220 L420 240 L420 350 Z" fill="url(#bf2)"/><path d="M380 220 L420 200 L460 220 L420 240 Z" fill="#E6E3FB"/>
+      </g>
+      <path d="M120 120 Q 200 60 280 100 T 440 70" fill="none" stroke="#4B4FD2" stroke-width="2.5" stroke-dasharray="4 7" stroke-linecap="round"/>
+      <circle cx="120" cy="120" r="7" fill="#fff" stroke="#4B4FD2" stroke-width="3"/>
+      <circle cx="280" cy="100" r="7" fill="#fff" stroke="#4B4FD2" stroke-width="3"/>
+      <circle cx="440" cy="70" r="7" fill="#4B4FD2"/>
+      <path d="M492 150 l22 -10 l-6 24 z" fill="#F4BFCF"/>
+      <rect x="40" y="60" width="120" height="44" rx="14" fill="#fff" opacity=".95"/>
+      <rect x="56" y="74" width="16" height="16" rx="5" fill="#9EA3F2"/><rect x="80" y="76" width="64" height="5" rx="2.5" fill="#D2C8F4"/><rect x="80" y="86" width="44" height="5" rx="2.5" fill="#E6E3FB"/>
+    </svg>
+  </div>
+  <div class="caps">
+    <div class="cap"><i style="--c1:#4B4FD2;--c2:#1B1A86"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4z"/></svg></i><span><span lang="ar">استطلاعات الرأي</span><span lang="en">Opinion polls</span></span></div>
+    <div class="cap"><i style="--c1:#9EA3F2;--c2:#4B4FD2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></i><span><span lang="ar">المسوح الوطنية</span><span lang="en">National surveys</span></span></div>
+    <div class="cap"><i style="--c1:#F4BFCF;--c2:#9EA3F2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/></svg></i><span><span lang="ar">الرصد الإعلامي والرقمي</span><span lang="en">Media &amp; digital monitoring</span></span></div>
+    <div class="cap"><i style="--c1:#4B4FD2;--c2:#9EA3F2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></i><span><span lang="ar">مؤشرات وتقارير دورية</span><span lang="en">Indicators &amp; regular reports</span></span></div>
+  </div>
+</section>
+
+<!-- MEASURE -->
+<section id="measure">
+  <div class="slide" style="margin-top:44px">
+    <div>
+      <span class="kicker"><span lang="ar">ماذا نقيس</span><span lang="en">What we measure</span></span>
+      <h2><span lang="ar">مؤشرات تكشف لك ما يفكر فيه الليبيون.</span><span lang="en">Indicators that show what Libyans think.</span></h2>
+      <p class="lead"><span lang="ar">عن طريق بصيرة يمكنك قياس اتجاهات الرأي العام ومتابعة تطورها، في الموضوعات التي تعنيك:</span><span lang="en">Through Basira you can measure public opinion and follow how it moves, on the topics that matter to you:</span></p>
+      <div class="ind">
+        <div><i style="--c:#1B1A86"></i><span><b><span lang="ar">الخدمات العامة</span><span lang="en">Public services</span></b><span><span lang="ar">الكهرباء والمياه والوقود والصحة والتعليم، ومدى رضا الناس عنها.</span><span lang="en">Electricity, water, fuel, health and education, and how satisfied people are.</span></span></span></div>
+        <div><i style="--c:#4B4FD2"></i><span><b><span lang="ar">المعيشة والاقتصاد</span><span lang="en">Living conditions &amp; economy</span></b><span><span lang="ar">الأسعار والسيولة والدخل وفرص العمل، وكيف يرى الناس أحوالهم.</span><span lang="en">Prices, cash, income and jobs, and how people see their situation.</span></span></span></div>
+        <div><i style="--c:#7C80EA"></i><span><b><span lang="ar">الشأن العام والسياسة</span><span lang="en">Public affairs &amp; politics</span></b><span><span lang="ar">الثقة بالمؤسسات، والأولويات الوطنية، والمواقف من القضايا العامة.</span><span lang="en">Trust in institutions, national priorities and views on public issues.</span></span></span></div>
+        <div><i style="--c:#9EA3F2"></i><span><b><span lang="ar">المجتمع والشباب</span><span lang="en">Society &amp; youth</span></b><span><span lang="ar">التعليم والعمل والهجرة، وتطلعات الجيل الجديد.</span><span lang="en">Education, work, migration and the hopes of a new generation.</span></span></span></div>
+        <div><i style="--c:#C7BFF2"></i><span><b><span lang="ar">الإعلام والسمعة</span><span lang="en">Media &amp; reputation</span></b><span><span lang="ar">صورة المؤسسات والعلامات التجارية، وصدى الحملات والقرارات.</span><span lang="en">How institutions and brands are seen, and how campaigns and decisions land.</span></span></span></div>
+        <div><i style="--c:#F4BFCF"></i><span><b><span lang="ar">السوق والمستهلك</span><span lang="en">Market &amp; consumer</span></b><span><span lang="ar">عادات الشراء والتفضيلات، ورضا العملاء.</span><span lang="en">Buying habits, preferences and customer satisfaction.</span></span></span></div>
+      </div>
+    </div>
+    <svg class="ill" viewBox="0 0 480 330" role="img" aria-label="Illustration: arc of six indicator families">
+      <defs><linearGradient id="gnd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEEBFB"/><stop offset="1" stop-color="#FBFAFF" stop-opacity="0"/></linearGradient></defs>
+      <ellipse cx="240" cy="270" rx="220" ry="46" fill="url(#gnd)"/>
+      <g fill="none" stroke-width="54">
+        <path d="M70 250 A170 170 0 0 1 98.7 155.3" stroke="#1B1A86"/>
+        <path d="M101.6 151.2 A170 170 0 0 1 172.4 94" stroke="#4B4FD2"/>
+        <path d="M177 92 A170 170 0 0 1 237 80" stroke="#7C80EA"/>
+        <path d="M243 80 A170 170 0 0 1 303 92" stroke="#9EA3F2"/>
+        <path d="M307.6 94 A170 170 0 0 1 378.4 151.2" stroke="#C7BFF2"/>
+        <path d="M381.3 155.3 A170 170 0 0 1 410 250" stroke="#F4BFCF"/>
+      </g>
+      <path d="M120 250 A120 120 0 0 1 360 250" fill="none" stroke="#fff" stroke-width="6" opacity=".9"/>
+      <circle cx="240" cy="250" r="56" fill="#fff"/>
+      <circle cx="240" cy="250" r="56" fill="none" stroke="#E3E1F4" stroke-width="2"/>
+      <path d="M220 250 a20 20 0 1 1 40 0" fill="none" stroke="#4B4FD2" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="240" cy="250" r="6" fill="#1B1A86"/>
+      <path d="M240 250 L262 226" stroke="#1B1A86" stroke-width="4" stroke-linecap="round"/>
+      <path d="M60 60 q10 -18 22 0 q-12 10 -22 0z" fill="#9EA3F2" opacity=".6"/>
+      <path d="M410 50 l18 -8 l-5 20 z" fill="#F4BFCF"/>
+    </svg>
+  </div>
+</section>
+
+<!-- WHY / WINDOW -->
+<section id="why">
+  <div class="slide">
+    <svg class="ill" viewBox="0 0 460 400" role="img" aria-label="Illustration: a round window onto a landscape">
+      <defs>
+        <clipPath id="win"><circle cx="230" cy="200" r="150"/></clipPath>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCD5FA"/><stop offset="1" stop-color="#F6F3FF"/></linearGradient>
+        <linearGradient id="hl1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9EA3F2"/><stop offset="1" stop-color="#6E72DE"/></linearGradient>
+        <linearGradient id="hl2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4B4FD2"/><stop offset="1" stop-color="#1B1A86"/></linearGradient>
+      </defs>
+      <circle cx="230" cy="200" r="176" fill="#fff" stroke="#E3E1F4" stroke-width="2"/>
+      <g clip-path="url(#win)">
+        <rect x="60" y="40" width="340" height="320" fill="url(#sky)"/>
+        <circle cx="300" cy="130" r="30" fill="#F4BFCF"/>
+        <path d="M60 280 L140 200 L190 240 L260 160 L330 230 L400 190 L400 360 L60 360 Z" fill="url(#hl1)"/>
+        <path d="M60 320 L150 260 L230 300 L310 250 L400 300 L400 360 L60 360 Z" fill="url(#hl2)"/>
+        <g fill="#fff" opacity=".9"><rect x="150" y="296" width="10" height="16" rx="2"/><rect x="166" y="290" width="12" height="22" rx="2"/><rect x="184" y="300" width="9" height="12" rx="2"/><rect x="280" y="282" width="12" height="20" rx="2"/><rect x="298" y="276" width="10" height="26" rx="2"/></g>
+      </g>
+      <path d="M392 330 L440 382" stroke="#9EA3F2" stroke-width="6" stroke-linecap="round"/>
+      <path d="M58 60 l26 -10 l-6 28 z" fill="#F4BFCF"/>
+      <circle cx="410" cy="70" r="8" fill="#4B4FD2"/>
+    </svg>
+    <div>
+      <span class="kicker"><span lang="ar">لماذا بصيرة</span><span lang="en">Why Basira</span></span>
+      <h2><span lang="ar">نعرف ليبيا من الداخل.</span><span lang="en">We know Libya from the inside.</span></h2>
+      <p class="lead"><span lang="ar">لا نقرأ المجتمع الليبي من بعيد. فريقنا من أبنائه، يعرف مدنه ولهجاته وتفاصيل حياته اليومية، ولهذا تأتي نتائجنا أقرب إلى الواقع.</span><span lang="en">We do not read Libyan society from afar. Our team comes from it, knows its cities, dialects and daily life, and that keeps our findings close to reality.</span></p>
+      <div class="pts">
+        <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8"/></svg></span><span><b><span lang="ar">نفهم لغة الناس</span><span lang="en">We understand how people speak</span></b><span><span lang="ar">اللهجات المحلية والتعبيرات الشائعة وروح السخرية، فلا يضيع المعنى في التحليل.</span><span lang="en">Local dialects, common expressions and humour, so meaning is not lost in analysis.</span></span></span></div>
+        <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><b><span lang="ar">نصل إلى المدن</span><span lang="en">We reach the cities</span></b><span><span lang="ar">باحثون وباحثات ميدانيون في الشرق والغرب والجنوب.</span><span lang="en">Women and men field researchers in the east, west and south.</span></span></span></div>
+        <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><span><b><span lang="ar">نقرأ الفروق</span><span lang="en">We read the differences</span></b><span><span lang="ar">نتائج حسب المدينة والعمر والجنس، لا رقم واحد للبلاد كلها.</span><span lang="en">Results by city, age and gender, not one number for the whole country.</span></span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="sec-head">
+    <div><span class="kicker"><span lang="ar">الخدمات</span><span lang="en">Services</span></span>
+      <h2><span lang="ar">من السؤال إلى الإجابة الموثوقة.</span><span lang="en">From the question to a reliable answer.</span></h2></div>
+    <p><span lang="ar">نقدّم كل خدمة منفردة، أو نجمعها في برنامج واحد يُصمَّم حول ما تريد معرفته.</span><span lang="en">Each service is available on its own, or combined into one programme built around what you need to know.</span></p>
+  </div>
+  <div class="svc">
+    <div class="sv"><span class="ic" style="--c1:#4B4FD2;--c2:#1B1A86"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4z"/></svg></span><h3><span lang="ar">استطلاعات الرأي العام</span><span lang="en">Public opinion polls</span></h3><p><span lang="ar">عينات ممثلة ونتائج يمكن تعميمها بثقة، في مدينة واحدة أو على مستوى البلاد.</span><span lang="en">Representative samples and results you can generalise with confidence, in one city or nationwide.</span></p></div>
+    <div class="sv"><span class="ic" style="--c1:#9EA3F2;--c2:#4B4FD2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span><h3><span lang="ar">المسوح الميدانية</span><span lang="en">Field surveys</span></h3><p><span lang="ar">مسوح أسرية وفردية بأدوات رقمية ومتابعة دقيقة للجودة في كل مرحلة.</span><span lang="en">Household and individual surveys on digital tools, with careful quality control at every stage.</span></p></div>
+    <div class="sv"><span class="ic" style="--c1:#F4BFCF;--c2:#9EA3F2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/></svg></span><h3><span lang="ar">الرصد الإعلامي والرقمي</span><span lang="en">Media &amp; digital monitoring</span></h3><p><span lang="ar">متابعة مستمرة لما يُنشر ويُتداول حول موضوعاتك، وتنبيه حين يتصاعد الحديث عنها.</span><span lang="en">Ongoing tracking of what is published and shared on your topics, with alerts when talk rises.</span></p></div>
+    <div class="sv"><span class="ic" style="--c1:#4B4FD2;--c2:#9EA3F2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c1-3.5 3.5-5 6.5-5s5.5 1.5 6.5 5M16 4.5a3.5 3.5 0 0 1 0 7M18 15c2 .8 3.2 2.5 3.5 5"/></svg></span><h3><span lang="ar">جمع البيانات للشركاء</span><span lang="en">Data collection for partners</span></h3><p><span lang="ar">فرق ميدانية مدرّبة تنفّذ استبياناتكم بأي حجم وفي أي مدينة.</span><span lang="en">Trained field teams that run your questionnaires at any scale, in any city.</span></p></div>
+  </div>
+</section>
+
+<!-- OUTPUTS -->
+<section>
+  <div class="slide" style="margin-top:44px">
+    <div>
+      <span class="kicker"><span lang="ar">ما تحصل عليه</span><span lang="en">What you receive</span></span>
+      <h2><span lang="ar">النتائج بين يديك، بالشكل الذي يناسبك.</span><span lang="en">Results in your hands, in the format you need.</span></h2>
+      <p class="lead"><span lang="ar">نقدّم النتائج بلغة واضحة وتصميم يسهل قراءته، لتصل إلى من يحتاجها في مؤسستك.</span><span lang="en">Findings in plain language and an easy-to-read design, so they reach the right people in your organisation.</span></p>
+      <div class="outs">
+        <div><i style="--c:#1B1A86"></i><b><span lang="ar">تقارير تحليلية مفصّلة</span><span lang="en">Detailed analytical reports</span></b></div>
+        <div><i style="--c:#4B4FD2"></i><b><span lang="ar">لوحات نتائج تفاعلية</span><span lang="en">Interactive dashboards</span></b></div>
+        <div><i style="--c:#9EA3F2"></i><b><span lang="ar">موجزات أسبوعية وشهرية</span><span lang="en">Weekly and monthly briefs</span></b></div>
+        <div><i style="--c:#F4BFCF"></i><b><span lang="ar">عرض للنتائج أمام فريقك</span><span lang="en">A findings session with your team</span></b></div>
+      </div>
+    </div>
+    <svg class="ill float" viewBox="0 0 420 420" role="img" aria-label="Illustration: a phone showing a dashboard">
+      <defs><linearGradient id="ph" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9C5F7"/><stop offset="1" stop-color="#7C80EA"/></linearGradient></defs>
+      <ellipse cx="210" cy="392" rx="120" ry="16" fill="#4B4FD2" opacity=".1"/>
+      <rect x="120" y="30" width="180" height="350" rx="34" fill="url(#ph)"/>
+      <rect x="132" y="44" width="156" height="322" rx="24" fill="#fff"/>
+      <rect x="186" y="54" width="48" height="8" rx="4" fill="#E3E1F4"/>
+      <rect x="148" y="80" width="80" height="8" rx="4" fill="#1B1A86"/>
+      <rect x="148" y="96" width="56" height="6" rx="3" fill="#D2C8F4"/>
+      <rect x="148" y="118" width="124" height="86" rx="14" fill="#F3F1FE"/>
+      <g fill="#4B4FD2"><rect x="162" y="168" width="14" height="24" rx="4"/><rect x="184" y="150" width="14" height="42" rx="4"/><rect x="206" y="160" width="14" height="32" rx="4" fill="#9EA3F2"/><rect x="228" y="140" width="14" height="52" rx="4"/><rect x="250" y="156" width="14" height="36" rx="4" fill="#F4BFCF"/></g>
+      <rect x="148" y="218" width="58" height="58" rx="14" fill="#F3F1FE"/>
+      <circle cx="177" cy="247" r="18" fill="none" stroke="#E3E1F4" stroke-width="7"/>
+      <path d="M177 229 a18 18 0 1 1 -17 24" fill="none" stroke="#4B4FD2" stroke-width="7" stroke-linecap="round"/>
+      <rect x="214" y="218" width="58" height="58" rx="14" fill="#F3F1FE"/>
+      <path d="M222 262 l10 -10 l10 6 l16 -18" fill="none" stroke="#7C80EA" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="148" y="290" width="124" height="12" rx="6" fill="#EEEBFB"/>
+      <rect x="148" y="310" width="96" height="12" rx="6" fill="#EEEBFB"/>
+      <rect x="20" y="120" width="96" height="62" rx="16" fill="#fff" stroke="#E3E1F4"/>
+      <rect x="34" y="136" width="22" height="22" rx="7" fill="#9EA3F2"/><rect x="62" y="138" width="40" height="6" rx="3" fill="#D2C8F4"/><rect x="62" y="150" width="28" height="6" rx="3" fill="#E6E3FB"/>
+      <rect x="304" y="250" width="100" height="58" rx="16" fill="#fff" stroke="#E3E1F4"/>
+      <circle cx="326" cy="279" r="10" fill="#F4BFCF"/><rect x="344" y="270" width="46" height="6" rx="3" fill="#D2C8F4"/><rect x="344" y="282" width="32" height="6" rx="3" fill="#E6E3FB"/>
+      <path d="M340 70 l22 -9 l-5 23 z" fill="#F4BFCF"/>
+    </svg>
+  </div>
+</section>
+
+<!-- RELEASES -->
+<section id="releases">
+  <div class="sec-head">
+    <div><span class="kicker"><span lang="ar">الإصدارات</span><span lang="en">Releases</span></span>
+      <h2><span lang="ar">إصدارات بصيرة المفتوحة للجميع.</span><span lang="en">Basira's open releases.</span></h2></div>
+    <p><span lang="ar">إلى جانب الخدمات الخاصة، تصدر بصيرة قراءات دورية مجانية عن أحوال المجتمع الليبي.</span><span lang="en">Alongside commissioned work, Basira publishes free periodic readings of Libyan society.</span></p>
+  </div>
+  <div class="rel">
+    <div class="rc a"><span class="t"><span lang="ar">سنوي · مجاني</span><span lang="en">Annual · Free</span></span><h3><span lang="ar">مؤشر بصيرة الوطني</span><span lang="en">Basira National Index</span></h3><p><span lang="ar">قراءة شاملة لأحوال الليبيين وأولوياتهم، تُقارَن عامًا بعد عام.</span><span lang="en">A full reading of Libyans' conditions and priorities, compared year on year.</span></p></div>
+    <div class="rc b"><span class="t"><span lang="ar">نصف سنوي · مجاني</span><span lang="en">Twice a year · Free</span></span><h3><span lang="ar">نبض بصيرة</span><span lang="en">Basira Pulse</span></h3><p><span lang="ar">لقطة أقصر لما تغيّر خلال ستة أشهر.</span><span lang="en">A shorter snapshot of what changed in six months.</span></p></div>
+    <div class="rc c"><span class="t"><span lang="ar">قريبًا</span><span lang="en">Coming soon</span></span><h3><span lang="ar">بصيرة بالأرقام</span><span lang="en">Basira in numbers</span></h3><p><span lang="ar">هنا ستجد أبرز أرقامنا فور صدورها.</span><span lang="en">Our headline figures will appear here once released.</span></p><div class="soon" aria-hidden="true"><span></span><span></span><span></span></div></div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section>
+  <div class="sec-head">
+    <div><span class="kicker"><span lang="ar">لمن بصيرة</span><span lang="en">Who it's for</span></span>
+      <h2><span lang="ar">لكل من يحتاج أن يفهم الناس قبل أن يقرر.</span><span lang="en">For anyone who needs to understand people before deciding.</span></h2></div>
+  </div>
+  <div class="aud">
+    <div><b><span lang="ar">المنظمات الدولية</span><span lang="en">International organisations</span></b><span><span lang="ar">لتصميم البرامج وقياس أثرها وفهم السياق.</span><span lang="en">To design programmes, measure impact and read the context.</span></span></div>
+    <div><b><span lang="ar">الجهات العامة</span><span lang="en">Public bodies</span></b><span><span lang="ar">لمعرفة أولويات المواطنين وتقييمهم للخدمات.</span><span lang="en">To know citizens' priorities and how they rate services.</span></span></div>
+    <div><b><span lang="ar">الشركات</span><span lang="en">Companies</span></b><span><span lang="ar">لفهم السوق والمستهلك ومتابعة السمعة.</span><span lang="en">To understand the market, consumers and reputation.</span></span></div>
+    <div><b><span lang="ar">الإعلام والباحثون</span><span lang="en">Media and researchers</span></b><span><span lang="ar">لبيانات موثوقة تدعم القصة والدراسة.</span><span lang="en">For reliable data behind stories and studies.</span></span></div>
+  </div>
+  <p class="trust"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 7v5c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V7z"/><path d="m9 12 2 2 4-4"/></svg><span><span lang="ar">نعمل باستقلالية، ونحفظ خصوصية كل من يشاركنا رأيه.</span><span lang="en">We work independently and protect the privacy of everyone who shares their view with us.</span></span></p>
+</section>
+
+<section id="contact">
+  <div class="final">
+    <span class="deco" aria-hidden="true"></span>
+    <div>
+      <h2><span lang="ar">ماذا تريد أن تعرف عن المجتمع الليبي؟</span><span lang="en">What do you want to know about Libyan society?</span></h2>
+      <p><span lang="ar">أخبرنا بسؤالك والمدن التي تهمك، ونعود إليك بعرض فني ومالي واضح.</span><span lang="en">Tell us your question and the cities you care about, and we'll come back with a clear proposal.</span></p>
+    </div>
+    <div class="actions">
+      <a class="btn btn-w" href="https://wa.me/218927678699" target="_blank" rel="noopener"><span lang="ar">راسلنا على واتساب</span><span lang="en">Message us on WhatsApp</span> <span class="arrow">→</span></a>
+      <a class="btn btn-o" data-link="home" href="../#contact"><span lang="ar">نموذج الطلب</span><span lang="en">Request form</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot">
+    <span><span lang="ar">مزيد بصيرة، ذراع البيانات في مزيد للاستشارات والأبحاث والتدريب.</span><span lang="en">Mazeed Basira, the data arm of Mazeed for Consulting, Research and Training.</span></span>
+    <span style="direction:ltr;unicode-bidi:isolate">+218 92 7678699</span>
+    <a data-link="home" href="../"><span lang="ar">العودة إلى مزيد</span><span lang="en">Back to Mazeed</span></a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var LIVE=/(^|\.)mazeed\.com\.ly$/.test(location.hostname);
+  var LINKS={home:LIVE?"../":"../index.html"}, root=document.documentElement;
+  function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  document.querySelectorAll("[data-link]").forEach(function(a){var h=a.getAttribute("href");a.href=LINKS[a.dataset.link]+(h.indexOf("#")>-1?h.slice(h.indexOf("#")):"")});
+  function setLang(l){root.lang=l;root.dir=l==="ar"?"rtl":"ltr";set("mz-lang",l)}
+  setLang(get("mz-lang")||"ar");
+  var th=get("mz-theme"); if(th) root.dataset.theme=th;
+  function isDark(){return root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
+  document.addEventListener("click",function(e){
+    var b=e.target.closest("[data-act]"); if(!b) return;
+    if(b.dataset.act==="lang") setLang(root.lang==="ar"?"en":"ar");
+    if(b.dataset.act==="theme"){var n=isDark()?"light":"dark";root.dataset.theme=n;set("mz-theme",n)}
+  });
+})();
+</script>
+
+</body>
+</html>

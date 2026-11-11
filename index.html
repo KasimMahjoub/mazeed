@@ -1109,7 +1109,9 @@ html[lang="en"] .i-logo{animation-name:linEn}
 
 <script>
 (function(){
-  var LINKS={academy:"https://academy.mazeed.com.ly",basira:"basira.html"};
+  // Folders on the same domain: mazeed.com.ly/academy/ and mazeed.com.ly/basira/
+  var LIVE=/(^|\.)mazeed\.com\.ly$/.test(location.hostname);
+  var LINKS={academy:LIVE?"academy/":"academy/index.html",basira:LIVE?"basira/":"basira/index.html"};
   var WA="218927678699", root=document.documentElement;
   function get(k){try{return localStorage.getItem(k)}catch(e){return null}}
   function set(k,v){try{localStorage.setItem(k,v)}catch(e){}}
